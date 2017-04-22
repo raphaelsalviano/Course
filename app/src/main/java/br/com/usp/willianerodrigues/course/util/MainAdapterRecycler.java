@@ -15,6 +15,7 @@ import java.util.List;
 
 import br.com.usp.willianerodrigues.course.CourseApplication;
 import br.com.usp.willianerodrigues.course.R;
+import br.com.usp.willianerodrigues.course.activity.ExerciceActivity;
 import br.com.usp.willianerodrigues.course.model.ItemMenu;
 
 public class MainAdapterRecycler extends RecyclerView.Adapter<MainAdapterRecycler.MainAdapterViewHolder> {
@@ -57,7 +58,7 @@ public class MainAdapterRecycler extends RecyclerView.Adapter<MainAdapterRecycle
                @Override
                public void onClick (View v) {
                     if (!itemMenu.isDisable()) {
-                         Intent intent = new Intent(context, null);
+                         Intent intent = new Intent(context, ExerciceActivity.class);
                          intent.putExtra("item", itemMenu.getName());
                          context.startActivity(intent);
                     }

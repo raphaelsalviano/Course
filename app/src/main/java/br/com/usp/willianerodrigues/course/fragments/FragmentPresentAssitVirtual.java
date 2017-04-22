@@ -53,7 +53,7 @@ public class FragmentPresentAssitVirtual extends Fragment {
             @Override
             public void onClick (View v) {
                 Intent intent = new Intent(getActivity(), null);
-                intent.putExtra("exercice","initial");
+                intent.putExtra("exercice","apresentacao");
                 getActivity().startActivity(intent);
                 getActivity().finish();
             }
@@ -63,7 +63,7 @@ public class FragmentPresentAssitVirtual extends Fragment {
             @Override
             public void onClick (View v) {
                 getFragmentManager().beginTransaction().
-                        replace(R.id.content_initial_exercice, null).commit();
+                        replace(R.id.content_initial_exercice, new FragmentUserAdvancedWill()).commit();
             }
         });
 

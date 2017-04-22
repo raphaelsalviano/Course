@@ -9,6 +9,7 @@ import android.view.MenuItem;
 
 import br.com.usp.willianerodrigues.course.R;
 import br.com.usp.willianerodrigues.course.fragments.FragmentPresentAssitVirtual;
+import br.com.usp.willianerodrigues.course.fragments.FragmentUserAdvancedWill;
 
 public class AssitVirtualActivit extends AppCompatActivity {
 
@@ -33,6 +34,9 @@ public class AssitVirtualActivit extends AppCompatActivity {
         if(startScreen != null && startScreen.equalsIgnoreCase("apresentacao")){
             getSupportFragmentManager().beginTransaction().replace(R.id.content_initial_exercice,
                     new FragmentPresentAssitVirtual()).commit();
+        }else if(startScreen != null && startScreen.equalsIgnoreCase("advanced")){
+            getSupportFragmentManager().beginTransaction().replace(R.id.content_initial_exercice,
+                    new FragmentUserAdvancedWill()).commit();
         }
 
     }

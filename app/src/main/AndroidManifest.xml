@@ -27,7 +27,8 @@
         <activity
             android:name=".activity.MainActivity"
             android:label=""
-            android:theme="@style/AppTheme"/>
+            android:theme="@style/AppTheme" />
+        <activity android:name=".activity.ExerciceActivity"></activity>
     </application>
 
 </manifest>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <ImageView
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            android:contentDescription="@string/img_description"
+            android:id="@+id/will_virtual_present"/>
+
+        <br.com.usp.willianerodrigues.course.util.RobotoRegular
+            android:id="@+id/will_talk_question_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:text="@string/will_start_frase"
+            android:textColor="@color/md_purple_500"
+            android:textSize="16sp"/>
+
+        <br.com.usp.willianerodrigues.course.util.RobotoRegular
+            android:id="@+id/will_talk_question_home2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:text="@string/will_question_one"
+            android:textColor="@color/md_purple_500"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/initial_container_button_question_pc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       android:padding="16dp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_gravity="end">
+
+        <Button
+            android:id="@+id/btn_sou_iniciante"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_gravity="center"
+            android:background="@drawable/raised_button_purple"
+            android:padding="8dp"
+            android:text="@string/btn_initial_question"
+            android:textAllCaps="true"
+            android:textColor="@color/md_text_white"/>
+
+        <Button
+            android:id="@+id/btn_ja_tem_conhecimento"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="center"
+            android:background="@drawable/border_button_purple"
+            android:padding="8dp"
+            android:text="@string/btn_advanced_question"
+            android:textAllCaps="true"
+            android:textColor="@color/md_purple_500"/>
+
+    </LinearLayout>
+
+</LinearLayout>

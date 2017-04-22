@@ -1,0 +1,82 @@
+<resources>
+    <!-- Padrão para o app -->
+    <string name="app_name">Course</string>
+    <string name="app_name_into">course</string>
+    <string name="img_description">descricao de imagem</string>
+
+    <!-- Tela de Apresentação -->
+    <string name="slide_01_title">Teste o nível de conhecimento em alfabetização computacional</string>
+    <string name="button_start">Início</string>
+    <string name="button_already_have_account">Já possuo uma conta</string>
+
+    <!-- Tela de Registro -->
+    <string name="activity_register">Registrar-se</string>
+    <string name="app_name_register">Contas</string>
+    <string name="new_account">Criar uma nova conta</string>
+    <string name="new_account_description">A sua conta do course lhe dá acesso ao aplicativo e as atividades</string>
+    <string name="about_count">Informações necessárias para sua conta</string>
+    <string name="hint_name">Nome</string>
+    <string name="hint_lastname">Sobrenome</string>
+    <string name="hint_username">Usuário</string>
+    <string name="action_register_short">Registrar</string>
+    <string name="hint_password">Senha</string>
+    <string name="text_button_register">Cadastrar</string>
+
+    <!-- Strings related to login -->
+    <string name="activity_login">Entrar</string>
+    <string name="prompt_email">Usuário</string>
+    <string name="prompt_password">Senha</string>
+    <string name="action_sign_in">ENTRAR</string>
+    <string name="action_sign_in_short">ENTRAR</string>
+    <string name="button_login">Entrar</string>
+    <string name="error_invalid_email">Nome de usuário inválido</string>
+    <string name="no_register_email">Este nome de usuário não está cadastrado</string>
+    <string name="error_invalid_password">Senha no formato inválido, deve conter entre 4 e 16 caracteres</string>
+    <string name="error_incorrect_password">A senha está incorreta</string>
+    <string name="error_field_required">Este campo é necessário</string>
+    <string name="username_existing">Nome de usuário já existe</string>
+    <string name="title_activity_login">Sign in</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <!-- Strings related to Main -->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_about">Sobre</string>
+    <string name="nav_help">Ajuda</string>
+    <string name="nav_profile">Perfil</string>
+    <string name="nav_settings">Configurações</string>
+    <string name="nav_exit">Sair</string>
+
+    <string name="drawer_point">Pontuação</string>
+    <string name="drawer_point_litle">pontos</string>
+    <string name="select_new_content">Escolha um conteúdo:</string>
+    <string name="know_computer">Conheça o computador</string>
+    <string name="operational_systems">Sistemas Operacionais</string>
+    <string name="text_editors">Editores de Texto</string>
+    <string name="sheet_editors">Editores de Planilhas</string>
+    <string name="publishers_presentations">Editores de Apresentações</string>
+    <string name="internet">Internet</string>
+    <string name="action_assistant">Ajuda</string>
+
+    <!-- Strings related to Will -->
+    <string name="will_start_frase">Olá. Sou Wil.\nVou te ajudar sempre que necessário aqui no Course.</string>
+    <string name="will_question_one">Vamos começar.\nVocê é iniciante ou já conhece alguma coisa sobre computador?</string>
+    <string name="will_advanced_frase1">Vamos fazer o teste para avançar, certo?\nAperte em começar quando se sentir preparado.</string>
+
+    <string name="btn_initial_question">Sou iniciante</string>
+    <string name="btn_advanced_question">Já possuo algum conhecimento</string>
+    <string name="btn_start_advanced">Começar</string>
+    <string name="btn_cancel_advanced">Cancelar</string>
+    <string name="btn_cancel_advance">Cancelar</string>
+    <string name="btn_next_advance">Continuar</string>
+
+    <!-- Strings related to Exercice -->
+    <string name="alert_close_title">Tem certeza que deseja sai?</string>
+    <string name="alert_close_message">Todo o progresso nesta sessão será perdido.</string>
+    <string name="alert_close_positive_button">Desistir</string>
+    <string name="alert_close_negative_button">Cancelar</string>
+
+    <!-- Strings related to About -->
+    <string name="version_app">Versão: </string>
+    <string name="title_activity_initial_exercice">InitialExerciceActivity</string>
+</resources>

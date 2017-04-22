@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.PresentationActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <br.com.usp.willianerodrigues.course.util.Bauhs93
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/app_name_into"
+            android:textColor="?attr/colorPrimary"
+            android:textSize="56sp" />
+
+        <br.com.usp.willianerodrigues.course.util.RobotoRegular
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="@string/slide_01_title"
+            android:textColor="@color/md_purple_500"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/button_start"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/raised_button_purple"
+            android:padding="8dp"
+            android:text="@string/button_start"
+            android:textAllCaps="true"
+            android:textColor="@color/md_white_1000"
+            android:textColorHighlight="@color/md_text_white" />
+
+        <Button
+            android:id="@+id/button_already_have_account"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:background="@drawable/border_button_purple"
+            android:padding="8dp"
+            android:text="@string/button_already_have_account"
+            android:textAllCaps="true"
+            android:textColor="@color/md_purple_700" />
+
+    </LinearLayout>
+
+</LinearLayout>

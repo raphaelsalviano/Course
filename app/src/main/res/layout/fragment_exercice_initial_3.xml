@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <br.com.usp.willianerodrigues.course.util.RobotoBold
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:gravity="start"
+        android:text="Julgue as afirmação abaixo, relativos a conceitos básicos de informática"
+        android:textColor="@color/md_text"
+        android:textSize="16sp" />
+
+    <br.com.usp.willianerodrigues.course.util.RobotoRegular
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="8dp"
+        android:gravity="start"
+        android:text="A menor unidade de informação armazenável em um computador é o byte, suficiente, em muitos casos, para armazenar um caracter."
+        android:textColor="@color/md_secondary_text_icons"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:id="@+id/exercice_initial_3_o1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_button_purple"
+        android:clickable="true"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <br.com.usp.willianerodrigues.course.util.RobotoRegular
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_margin="16dp"
+            android:gravity="center"
+            android:text="Certo"
+            android:textColor="@color/md_purple_500"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/exercice_initial_3_o2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_button_purple"
+        android:clickable="true"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <br.com.usp.willianerodrigues.course.util.RobotoRegular
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_margin="16dp"
+            android:gravity="center"
+            android:text="Errado"
+            android:textColor="@color/md_purple_500"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/exercice_initial_3_nao_sei"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_button_purple"
+        android:clickable="true"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <br.com.usp.willianerodrigues.course.util.RobotoRegular
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_margin="16dp"
+            android:gravity="center"
+            android:text="Não sei"
+            android:textColor="@color/md_purple_500"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

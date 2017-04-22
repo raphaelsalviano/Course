@@ -56,6 +56,16 @@ public class CourseApplication extends Application implements DBMethods {
         return controller.searchUserByUser(usuario);
     }
 
+    public void calcularPontuacao(int porcentagemConcluida) throws Exception {
+        Usuario usuario = getUserActive();
+        if(usuario == null){
+            throw new Exception("Usuário vazio");
+        }
+        int valor = (50 * porcentagemConcluida) / 100;
+        usuario.setPontuacao(valor);
+        createOrUpdateUser(usuario);
+    }
+
     @Override
     public List<ItemMenu> getAllItens () throws SQLException {
         return controller.getAllItens();

@@ -75,6 +75,8 @@
     <string name="alert_close_positive_button">Desistir</string>
     <string name="alert_close_negative_button">Cancelar</string>
 
+    <string name="alert_exercice_positive_button">Continuar</string>
+
     <!-- Strings related to About -->
     <string name="version_app">Versão: </string>
     <string name="title_activity_initial_exercice">InitialExerciceActivity</string>

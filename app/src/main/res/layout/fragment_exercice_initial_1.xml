@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <br.com.usp.willianerodrigues.course.util.RobotoBold
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:gravity="start"
+        android:text="Um determinado periférico acoplado a CPU de um PC possui as seguintes características:"
+        android:textColor="@color/md_text"
+        android:textSize="16sp" />
+
+    <br.com.usp.willianerodrigues.course.util.RobotoRegular
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="8dp"
+        android:gravity="start"
+        android:text="- é especificamente um dispositivo de entrada;\n- é um dispositivo Plug and Play;\n- pode-se conectar a CPU através de portas USB;\n- alguns modelos possuem recursos para multimídia e/ou navegação na internet."
+        android:textColor="@color/md_secondary_text_icons"
+        android:textSize="16sp" />
+
+    <br.com.usp.willianerodrigues.course.util.RobotoBold
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="8dp"
+        android:gravity="start"
+        android:text="Qual periférico possui tais características?"
+        android:textColor="@color/md_text"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp">
+
+        <LinearLayout
+            android:id="@+id/exercice_initial_1_o1"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/border_button_purple"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_margin="8dp"
+                app:srcCompat="@drawable/monitor"
+                android:contentDescription="@string/img_description" />
+
+            <br.com.usp.willianerodrigues.course.util.RobotoRegular
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:text="Monitor"
+                android:textColor="@color/md_purple_500"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/exercice_initial_1_o2"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_button_purple"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_margin="8dp"
+                app:srcCompat="@drawable/impressora"
+                android:contentDescription="@string/img_description" />
+
+            <br.com.usp.willianerodrigues.course.util.RobotoRegular
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:text="Impressora"
+                android:textColor="@color/md_purple_500"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+
+        <LinearLayout
+            android:id="@+id/exercice_initial_1_o3"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/border_button_purple"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_margin="8dp"
+                app:srcCompat="@drawable/pendrive"
+                android:contentDescription="@string/img_description" />
+
+            <br.com.usp.willianerodrigues.course.util.RobotoRegular
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:text="Pendrive"
+                android:textColor="@color/md_purple_500"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/exercice_initial_1_o4"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_button_purple"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_margin="8dp"
+                app:srcCompat="@drawable/teclado"
+                android:contentDescription="@string/img_description" />
+
+            <br.com.usp.willianerodrigues.course.util.RobotoRegular
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:text="Teclado"
+                android:textColor="@color/md_purple_500"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/exercice_initial_1_nao_sei"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_button_purple"
+        android:clickable="true"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <br.com.usp.willianerodrigues.course.util.RobotoRegular
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_margin="16dp"
+            android:gravity="center"
+            android:text="Não sei"
+            android:textColor="@color/md_purple_500"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

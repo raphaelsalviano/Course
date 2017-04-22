@@ -32,7 +32,7 @@
             android:layout_marginStart="16dp"
             android:layout_weight="1"
             android:indeterminate="false"
-            android:max="3" />
+            android:max="100" />
 
 
     </LinearLayout>

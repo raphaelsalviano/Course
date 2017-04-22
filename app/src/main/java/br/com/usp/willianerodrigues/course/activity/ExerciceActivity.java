@@ -10,6 +10,8 @@ import android.view.View;
 import java.sql.SQLException;
 
 import br.com.usp.willianerodrigues.course.R;
+import br.com.usp.willianerodrigues.course.fragments.FragmentExerciceInitial1;
+import br.com.usp.willianerodrigues.course.fragments.FragmentUserAdvancedWill;
 
 public class ExerciceActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -26,7 +28,15 @@ public class ExerciceActivity extends AppCompatActivity implements View.OnClickL
 
         ((findViewById(R.id.close_exercice))).setOnClickListener(this);
 
+        if (local.equalsIgnoreCase("advanced")) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.container_exercice,
+                    new FragmentExerciceInitial1()).commit();
+        } else if (local.equalsIgnoreCase("apresentacao")) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.container_exercice,
+                    new FragmentExerciceInitial1()).commit();
+        } else if (local.equalsIgnoreCase("main")) {
 
+        }
     }
 
     @Override

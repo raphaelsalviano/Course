@@ -21,6 +21,8 @@ public class Usuario implements Serializable {
      private String password;
      @DatabaseField(dataType = DataType.BOOLEAN)
      private boolean active;
+     @DatabaseField(dataType = DataType.INTEGER)
+     private int pontuacao;
 
      public Usuario () {
      }
@@ -31,6 +33,7 @@ public class Usuario implements Serializable {
           this.username = username;
           this.password = password;
           this.active = false;
+          this.pontuacao = 0;
      }
 
      public long getId () {
@@ -79,5 +82,13 @@ public class Usuario implements Serializable {
 
      public void setActive (boolean active) {
           this.active = active;
+     }
+
+     public int getPontuacao() {
+          return pontuacao;
+     }
+
+     public void setPontuacao(int pontuacao) {
+          this.pontuacao = pontuacao;
      }
 }

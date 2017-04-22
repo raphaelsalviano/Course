@@ -29,7 +29,8 @@
             android:label=""
             android:theme="@style/AppTheme" />
         <activity android:name=".activity.ExerciceActivity" />
-        <activity android:name=".activity.FinishExerciceActivity"></activity>
+        <activity android:name=".activity.FinishExerciceActivity" />
+        <activity android:name=".activity.RegistroActivity"></activity>
     </application>
 
 </manifest>

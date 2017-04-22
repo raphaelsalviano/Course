@@ -83,6 +83,6 @@ public class FragmentExerciceInitial3 extends Fragment {
         View view = View.inflate(getActivity(), R.layout.activity_exercice, null);
 
         ProgressBar bar = (ProgressBar) view.findViewById(R.id.progressBar_exercice);
-        bar.setProgress(66);
+        bar.setProgress(100);
     }
 }

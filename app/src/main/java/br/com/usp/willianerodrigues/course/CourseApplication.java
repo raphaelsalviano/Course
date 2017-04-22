@@ -14,6 +14,7 @@ import br.com.usp.willianerodrigues.course.model.Usuario;
 public class CourseApplication extends Application implements DBMethods {
 
     public static final String APP_VERSION = "1.0";
+    private int pontuacao = 0;
 
     private ORMController controller;
 
@@ -56,18 +57,29 @@ public class CourseApplication extends Application implements DBMethods {
         return controller.searchUserByUser(usuario);
     }
 
-    public void calcularPontuacao(int porcentagemConcluida) throws Exception {
+    public int calcularPontuacao(int porcentagemConcluida){
+        return (50 * porcentagemConcluida) / 100;
+    }
+
+    public void inserirPontuacaoUser(int pontuacao) throws Exception{
         Usuario usuario = getUserActive();
         if(usuario == null){
             throw new Exception("Usuário vazio");
         }
-        int valor = (50 * porcentagemConcluida) / 100;
-        usuario.setPontuacao(valor);
+        usuario.setPontuacao(pontuacao);
         createOrUpdateUser(usuario);
     }
 
     @Override
     public List<ItemMenu> getAllItens () throws SQLException {
         return controller.getAllItens();
+    }
+
+    public int getPontuacao() {
+        return pontuacao;
+    }
+
+    public void setPontuacao(int pontuacao) {
+        this.pontuacao = pontuacao;
     }
 }

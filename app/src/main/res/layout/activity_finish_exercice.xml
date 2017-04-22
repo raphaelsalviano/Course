@@ -24,6 +24,116 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <br.com.usp.willianerodrigues.course.util.RobotoBold
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:gravity="start"
+                android:text="Lição Concluída!"
+                android:textColor="@color/md_text"
+                android:textSize="24sp" />
+
+            <br.com.usp.willianerodrigues.course.util.RobotoRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:gravity="start"
+                android:id="@+id/text_pontuacao"
+                android:layout_marginStart="16dp"
+                android:text="+ 50 PE"
+                android:textColor="@color/md_text"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+
+            <ProgressBar
+                android:id="@+id/progressBar_finish_exercice"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="156dp"
+                android:layout_height="188dp"
+                android:indeterminate="false"
+                android:max="100"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true">
+
+                <br.com.usp.willianerodrigues.course.util.RobotoBold
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:gravity="start"
+                    android:text="00"
+                    android:id="@+id/porcentagem_concluido"
+                    android:textColor="@color/md_purple_500"
+                    android:textSize="45sp" />
+
+                <br.com.usp.willianerodrigues.course.util.RobotoRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:gravity="start"
+                    android:text="%"
+                    android:textColor="@color/md_purple_500"
+                    android:textSize="24sp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <br.com.usp.willianerodrigues.course.util.RobotoRegular
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Você foi acima da meta! Parabéns"
+                android:textColor="@color/md_text"
+                android:id="@+id/texto_de_meta"
+                android:textSize="20sp" />
+
+
+            <br.com.usp.willianerodrigues.course.util.RobotoRegular
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="32dp"
+                android:padding="8dp"
+                android:id="@+id/messagem_texto_de_meta"
+                android:text="Agora você é capaz de entender um pouco mais sobre as funções do computador. Agora você poderá ir para o próximo nível."
+                android:textColor="@color/md_text"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </LinearLayout>

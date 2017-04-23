@@ -15,6 +15,7 @@ import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
 
 import br.com.usp.willianerodrigues.course.R;
+import br.com.usp.willianerodrigues.course.activity.ExerciceActivity;
 
 public class FragmentUserAdvancedWill extends Fragment {
 
@@ -45,7 +46,7 @@ public class FragmentUserAdvancedWill extends Fragment {
         (view.findViewById(R.id.btn_next_advance)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick (View v) {
-                Intent intent = new Intent(getActivity(), null);
+                Intent intent = new Intent(getActivity(), ExerciceActivity.class);
                 intent.putExtra("exercice","advanced");
                 getActivity().startActivity(intent);
                 getActivity().finish();

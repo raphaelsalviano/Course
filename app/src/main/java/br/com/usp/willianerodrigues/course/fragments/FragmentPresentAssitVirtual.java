@@ -15,6 +15,7 @@ import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
 
 import br.com.usp.willianerodrigues.course.R;
+import br.com.usp.willianerodrigues.course.activity.ExerciceActivity;
 
 public class FragmentPresentAssitVirtual extends Fragment {
 
@@ -52,7 +53,7 @@ public class FragmentPresentAssitVirtual extends Fragment {
         (view.findViewById(R.id.btn_sou_iniciante)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick (View v) {
-                Intent intent = new Intent(getActivity(), null);
+                Intent intent = new Intent(getActivity(), ExerciceActivity.class);
                 intent.putExtra("exercice","apresentacao");
                 getActivity().startActivity(intent);
                 getActivity().finish();

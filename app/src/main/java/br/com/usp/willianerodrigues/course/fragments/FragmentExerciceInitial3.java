@@ -15,7 +15,7 @@ public class FragmentExerciceInitial3 extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_exercice_initial_2, container, false);
+        View view = inflater.inflate(R.layout.fragment_exercice_initial_3, container, false);
 
         movimentarProgressBar();
 

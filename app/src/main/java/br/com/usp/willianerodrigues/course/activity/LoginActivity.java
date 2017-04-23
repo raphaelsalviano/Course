@@ -213,7 +213,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     e.printStackTrace();
                 }
 
-                Intent intent = new Intent(LoginActivity.this, null);
+                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                 startActivity(intent);
                 onCancelled();
                 finish();

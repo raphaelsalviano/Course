@@ -60,6 +60,7 @@ public class MainAdapterRecycler extends RecyclerView.Adapter<MainAdapterRecycle
                     if (!itemMenu.isDisable()) {
                          Intent intent = new Intent(context, ExerciceActivity.class);
                          intent.putExtra("item", itemMenu.getName());
+                         intent.putExtra("exercice","main" );
                          context.startActivity(intent);
                     }
                }

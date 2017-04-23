@@ -35,11 +35,11 @@ public class FinishExerciceActivity extends AppCompatActivity {
         }
 
         TextView pontuacao = (TextView) findViewById(R.id.text_pontuacao);
-        pontuacao.setText(application.getPontuacao());
+        pontuacao.setText(""+application.getPontuacao());
         ProgressBar bar = (ProgressBar) findViewById(R.id.progressBar_finish_exercice);
         bar.setProgress(application.getPontuacao());
         TextView porcentagemNivel = (TextView) findViewById(R.id.porcentagem_concluido);
-        porcentagemNivel.setText(application.getPontuacao());
+        porcentagemNivel.setText(""+application.getPontuacao());
         TextView textoMeta = (TextView) findViewById(R.id.texto_de_meta);
         TextView MenssagemMeta = (TextView) findViewById(R.id.messagem_texto_de_meta);
 

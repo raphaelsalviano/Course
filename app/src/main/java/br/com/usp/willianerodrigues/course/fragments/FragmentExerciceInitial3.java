@@ -1,6 +1,7 @@
 package br.com.usp.willianerodrigues.course.fragments;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AlertDialog;
@@ -10,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.ProgressBar;
 
 import br.com.usp.willianerodrigues.course.R;
+import br.com.usp.willianerodrigues.course.activity.FinishExerciceActivity;
 
 public class FragmentExerciceInitial3 extends Fragment {
 
@@ -17,9 +19,9 @@ public class FragmentExerciceInitial3 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_exercice_initial_3, container, false);
 
-        movimentarProgressBar();
+        movimentarProgressBar(inflater);
 
-        ((view.findViewById(R.id.exercice_initial_2_o1))).setOnClickListener(new View.OnClickListener() {
+        ((view.findViewById(R.id.exercice_initial_3_o1))).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 new AlertDialog.Builder(getActivity())
@@ -30,15 +32,16 @@ public class FragmentExerciceInitial3 extends Fragment {
                         .setPositiveButton(R.string.alert_exercice_positive_button, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                getFragmentManager().beginTransaction().replace(R.id.container_exercice,
-                                        new FragmentExerciceInitial3()).commit();
+                                Intent intent = new Intent(getActivity(), FinishExerciceActivity.class);
+                                getActivity().startActivity(intent);
+                                getActivity().finish();
                             }
                         })
                         .create().show();
             }
         });
 
-        ((view.findViewById(R.id.exercice_initial_2_o2))).setOnClickListener(new View.OnClickListener() {
+        ((view.findViewById(R.id.exercice_initial_3_o2))).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 new AlertDialog.Builder(getActivity())
@@ -49,15 +52,16 @@ public class FragmentExerciceInitial3 extends Fragment {
                         .setPositiveButton(R.string.alert_exercice_positive_button, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                getFragmentManager().beginTransaction().replace(R.id.container_exercice,
-                                        new FragmentExerciceInitial3()).commit();
+                                Intent intent = new Intent(getActivity(), FinishExerciceActivity.class);
+                                getActivity().startActivity(intent);
+                                getActivity().finish();
                             }
                         })
                         .create().show();
             }
         });
 
-        ((view.findViewById(R.id.exercice_initial_2_nao_sei))).setOnClickListener(new View.OnClickListener() {
+        ((view.findViewById(R.id.exercice_initial_3_nao_sei))).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 new AlertDialog.Builder(getActivity())
@@ -68,8 +72,9 @@ public class FragmentExerciceInitial3 extends Fragment {
                         .setPositiveButton(R.string.alert_exercice_positive_button, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                getFragmentManager().beginTransaction().replace(R.id.container_exercice,
-                                        new FragmentExerciceInitial3()).commit();
+                                Intent intent = new Intent(getActivity(), FinishExerciceActivity.class);
+                                getActivity().startActivity(intent);
+                                getActivity().finish();
                             }
                         })
                         .create().show();
@@ -79,8 +84,8 @@ public class FragmentExerciceInitial3 extends Fragment {
         return view;
     }
 
-    private void movimentarProgressBar(){
-        View view = View.inflate(getActivity(), R.layout.activity_exercice, null);
+    private void movimentarProgressBar(LayoutInflater layoutInflater){
+        View view = layoutInflater.inflate(R.layout.activity_exercice, null);
 
         ProgressBar bar = (ProgressBar) view.findViewById(R.id.progressBar_exercice);
         bar.setProgress(100);

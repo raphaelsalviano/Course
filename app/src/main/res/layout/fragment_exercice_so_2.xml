@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <br.com.usp.willianerodrigues.course.util.RobotoBold
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="bottom"
+        android:gravity="start"
+        android:text="NÃO é uma função do sistema operacional:"
+        android:textColor="@color/md_text"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:id="@+id/exercice_advanced_2_o1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_button_purple"
+        android:clickable="true"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <br.com.usp.willianerodrigues.course.util.RobotoRegular
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_margin="16dp"
+            android:gravity="center"
+            android:text="Permitir aos programas armazenar e obter informações."
+            android:textColor="@color/md_purple_500"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/exercice_advanced_2_o2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_button_purple"
+        android:clickable="true"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <br.com.usp.willianerodrigues.course.util.RobotoRegular
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_margin="16dp"
+            android:gravity="center"
+            android:text="Controlar o fluxo de dados entre os componentes do computador."
+            android:textColor="@color/md_purple_500"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/exercice_advanced_2_o3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_button_purple"
+        android:clickable="true"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <br.com.usp.willianerodrigues.course.util.RobotoRegular
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_margin="16dp"
+            android:gravity="center"
+            android:text="Responder a erros e a pedidos do usuário."
+            android:textColor="@color/md_purple_500"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/exercice_advanced_2_o4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_button_purple"
+        android:clickable="true"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <br.com.usp.willianerodrigues.course.util.RobotoRegular
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_margin="16dp"
+            android:gravity="center"
+            android:text="Impor escalonamento entre programas que solicitam recursos."
+            android:textColor="@color/md_purple_500"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/exercice_advanced_2_o5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_button_purple"
+        android:clickable="true"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <br.com.usp.willianerodrigues.course.util.RobotoRegular
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_margin="16dp"
+            android:gravity="center"
+            android:text="Gerenciar apenas a base de dados."
+            android:textColor="@color/md_purple_500"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/exercice_advanced_2_nao_sei"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_button_purple"
+        android:clickable="true"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <br.com.usp.willianerodrigues.course.util.RobotoRegular
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_margin="16dp"
+            android:gravity="center"
+            android:text="Não sei"
+            android:textColor="@color/md_purple_500"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

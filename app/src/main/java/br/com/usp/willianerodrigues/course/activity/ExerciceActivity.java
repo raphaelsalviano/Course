@@ -16,6 +16,7 @@ import br.com.usp.willianerodrigues.course.R;
 import br.com.usp.willianerodrigues.course.fragments.FragmentExerciceAdvanced1;
 import br.com.usp.willianerodrigues.course.fragments.FragmentExerciceConhecaPc1;
 import br.com.usp.willianerodrigues.course.fragments.FragmentExerciceInitial1;
+import br.com.usp.willianerodrigues.course.fragments.FragmentExerciceSO1;
 import br.com.usp.willianerodrigues.course.fragments.FragmentUserAdvancedWill;
 import br.com.usp.willianerodrigues.course.model.ItemMenu;
 
@@ -29,6 +30,7 @@ public class ExerciceActivity extends AppCompatActivity implements View.OnClickL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exercice);
 
+        application = (CourseApplication) getApplicationContext();
         List<ItemMenu> itemMenus = new ArrayList<>();
 
         try {
@@ -37,7 +39,6 @@ public class ExerciceActivity extends AppCompatActivity implements View.OnClickL
             e.printStackTrace();
         }
 
-        application = (CourseApplication) getApplicationContext();
 
         if (getIntent().getExtras() != null) {
             local = getIntent().getExtras().getString("exercice");
@@ -61,7 +62,7 @@ public class ExerciceActivity extends AppCompatActivity implements View.OnClickL
                         new FragmentExerciceConhecaPc1()).commit();
             } else if (itemText.equalsIgnoreCase(itemMenus.get(1).getName())) {
                 getSupportFragmentManager().beginTransaction().replace(R.id.container_exercice,
-                        new FragmentExerciceInitial1()).commit();
+                        new FragmentExerciceSO1()).commit();
             } else if (itemText.equalsIgnoreCase(itemMenus.get(2).getName())) {
                 getSupportFragmentManager().beginTransaction().replace(R.id.container_exercice,
                         new FragmentExerciceInitial1()).commit();

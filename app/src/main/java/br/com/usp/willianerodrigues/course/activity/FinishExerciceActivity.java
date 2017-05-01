@@ -33,7 +33,6 @@ public class FinishExerciceActivity extends AppCompatActivity {
         DonutProgress progress = (DonutProgress) findViewById(R.id.donut_progress);
         progress.setMax(48);
         TextView pontuacao = (TextView) findViewById(R.id.text_pontuacao);
-        TextView porcentagemNivel = (TextView) findViewById(R.id.porcentagem_concluido);
         TextView textoMeta = (TextView) findViewById(R.id.texto_de_meta);
         TextView MenssagemMeta = (TextView) findViewById(R.id.messagem_texto_de_meta);
 
@@ -43,15 +42,13 @@ public class FinishExerciceActivity extends AppCompatActivity {
                 application.inserirPontuacaoUser();
                 application.resetPontuacao();
                 pontuacao.setText(usuario.getPontuacao());
-                progress.setDonut_progress("" + usuario.getPontuacao());
+                progress.setDonut_progress("" + (usuario.getPontuacao() * 100) / 16);
                 progress.setProgress(usuario.getPontuacao());
-                porcentagemNivel.setText((usuario.getPontuacao() * 100) / 16);
             } else {
                 Log.i("TAG", "Exception");
                 pontuacao.setText(application.getPontuacao());
-                progress.setDonut_progress("" + application.getPontuacao());
+                progress.setDonut_progress("" + (application.getPontuacao() * 100) / 16);
                 progress.setProgress(application.getPontuacao());
-                porcentagemNivel.setText((application.getPontuacao() * 100) / 46);
             }
         } catch (Exception e) {
             e.printStackTrace();

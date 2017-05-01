@@ -11,7 +11,7 @@ import br.com.usp.willianerodrigues.course.database.ORMController;
 import br.com.usp.willianerodrigues.course.model.ItemMenu;
 import br.com.usp.willianerodrigues.course.model.Usuario;
 
-public class CourseApplication extends Application {
+public class CourseApplication extends Application implements DBMethods {
 
     public static final String APP_VERSION = "1.1";
     private int pontuacao;
@@ -32,26 +32,31 @@ public class CourseApplication extends Application {
         controller.closeDatabase();
     }
 
-
+    @Override
     public void createOrUpdateUser (Usuario usuario) throws SQLException {
         controller.createOrUpdateUser(usuario);
     }
 
+    @Override
     public void removeUser (Usuario usuario) throws SQLException {
         controller.removeUser(usuario);
     }
 
+    @Override
     public Usuario getUserActive () throws SQLException {
         return controller.getUserActive();
     }
 
+    @Override
     public List<Usuario> getAllUser () throws SQLException {
         return controller.getAllUser();
     }
 
+    @Override
     public Usuario searchUserByUser (String usuario) throws SQLException {
         return controller.searchUserByUser(usuario);
     }
+
 
     public void calcularPontuacao(int porcentagemConcluida) {
         this.pontuacao = ((50 * porcentagemConcluida) / 100) + this.pontuacao;
@@ -66,6 +71,7 @@ public class CourseApplication extends Application {
         createOrUpdateUser(usuario);
     }
 
+    @Override
     public List<ItemMenu> getAllItens () throws SQLException {
         return controller.getAllItens();
     }

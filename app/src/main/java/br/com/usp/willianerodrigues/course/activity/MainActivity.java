@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_about) {
-            Intent intent = new Intent(this, null);
+            Intent intent = new Intent(this, AboutActivity.class);
             startActivity(intent);
             finish();
             return true;

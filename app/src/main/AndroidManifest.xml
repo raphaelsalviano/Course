@@ -33,7 +33,8 @@
         <activity android:name=".activity.ExerciceActivity" />
         <activity android:name=".activity.FinishExerciceActivity" />
         <activity android:name=".activity.RegistroActivity" />
-        <activity android:name=".activity.AboutActivity"></activity>
+        <activity android:name=".activity.AboutActivity" />
+        <activity android:name=".activity.ProfileActivity"></activity>
     </application>
 
 </manifest>

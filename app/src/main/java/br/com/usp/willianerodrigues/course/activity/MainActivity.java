@@ -95,7 +95,7 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_profile) {
-            Intent intent = new Intent(this, null);
+            Intent intent = new Intent(this, ProfileActivity.class);
             startActivity(intent);
             finish();
         } else if (id == R.id.nav_settings) {

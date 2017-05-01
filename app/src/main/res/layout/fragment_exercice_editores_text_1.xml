@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
+
+    <br.com.usp.willianerodrigues.course.util.RobotoBold
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:gravity="start"
+        android:text="Com referência aos ícones da interface de edição do MS Word, selecione quais itens devem ser acionados para realizarem as seguintes ações: aumentar em um ponto o tamanho da fonte; ativar a estrutura de tópicos; alinha texto à direita; alterar espaçamento entre linhas."
+        android:textColor="@color/md_text"
+        android:textSize="16sp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/exercice_advanced_1_o1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/border_button_purple"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_margin="8dp"
+                android:contentDescription="@string/img_description"
+                app:srcCompat="@drawable/exercicie_textos_1_1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/exercice_advanced_1_o2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/border_button_purple"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_margin="8dp"
+                android:contentDescription="@string/img_description"
+                app:srcCompat="@drawable/exercicie_textos_1_2" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/exercice_advanced_1_o3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/border_button_purple"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_margin="8dp"
+                android:contentDescription="@string/img_description"
+                app:srcCompat="@drawable/exercicie_textos_1_3" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/exercice_advanced_1_o4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/border_button_purple"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_margin="8dp"
+                android:contentDescription="@string/img_description"
+                app:srcCompat="@drawable/exercicie_textos_1_4" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/exercice_advanced_1_nao_sei"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/border_button_purple"
+        android:clickable="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <br.com.usp.willianerodrigues.course.util.RobotoRegular
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_margin="16dp"
+            android:gravity="center"
+            android:text="Não sei"
+            android:textColor="@color/md_purple_500"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

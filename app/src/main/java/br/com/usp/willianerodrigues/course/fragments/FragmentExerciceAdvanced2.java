@@ -13,111 +13,108 @@ import android.widget.ProgressBar;
 import br.com.usp.willianerodrigues.course.CourseApplication;
 import br.com.usp.willianerodrigues.course.R;
 
-public class FragmentExerciceInitial1 extends Fragment {
+public class FragmentExerciceAdvanced2 extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_exercice_initial_1, container, false);
+        View view = inflater.inflate(R.layout.fragment_exercice_advanced_2, container, false);
 
-        movimentarProgressBar(inflater, container);
+        movimentarProgressBar(inflater);
 
-        ((view.findViewById(R.id.exercice_advanced_1_o1))).setOnClickListener(new View.OnClickListener() {
+        ((view.findViewById(R.id.exercice_advanced_2_o1))).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 new AlertDialog.Builder(getActivity())
                         .setTitle("Resposta Incorreta!")
-                        .setMessage("A resposta correta é o TECLADO" +
-                                "ele é um periférico de entrada que é instalado automaticamente ao ser inserido no computador." +
-                                "A maioria dos teclados atualmente se conectam através de portas USB e traz funções extras (multimídia ou web) para facilitar o uso do computador e seus programas favoritos.")
-                        .setPositiveButton(R.string.alert_exercice_positive_button, new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                ((CourseApplication) getActivity().getApplicationContext()).calcularPontuacao(28);
-                                Log.i("TAG", "" + ((CourseApplication) getActivity().getApplicationContext()).getPontuacao());
-                               getFragmentManager().beginTransaction().replace(R.id.container_exercice,
-                                        new FragmentExerciceInitial2()).commit();
-                            }
-                        })
-                        .create().show();
-            }
-        });
-
-        ((view.findViewById(R.id.exercice_advanced_1_o2))).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                new AlertDialog.Builder(getActivity())
-                        .setTitle("Resposta Incorreta!")
-                        .setMessage("A resposta correta é o TECLADO" +
-                                "ele é um periférico de entrada que é instalado automaticamente ao ser inserido no computador." +
-                                "A maioria dos teclados atualmente se conectam através de portas USB e traz funções extras (multimídia ou web) para facilitar o uso do computador e seus programas favoritos.")
-                        .setPositiveButton(R.string.alert_exercice_positive_button, new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                ((CourseApplication) getActivity().getApplicationContext()).calcularPontuacao(28);
-                                Log.i("TAG", "" + ((CourseApplication) getActivity().getApplicationContext()).getPontuacao());
-                                getFragmentManager().beginTransaction().replace(R.id.container_exercice,
-                                        new FragmentExerciceInitial2()).commit();
-                            }
-                        })
-                        .create().show();
-            }
-        });
-
-        ((view.findViewById(R.id.exercice_advanced_1_o3))).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                new AlertDialog.Builder(getActivity())
-                        .setTitle("Resposta Incorreta!")
-                        .setMessage("A resposta correta é o TECLADO" +
-                                "ele é um periférico de entrada que é instalado automaticamente ao ser inserido no computador." +
-                                "A maioria dos teclados atualmente se conectam através de portas USB e traz funções extras (multimídia ou web) para facilitar o uso do computador e seus programas favoritos.")
-                        .setPositiveButton(R.string.alert_exercice_positive_button, new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                ((CourseApplication) getActivity().getApplicationContext()).calcularPontuacao(28);
-                                Log.i("TAG", "" + ((CourseApplication) getActivity().getApplicationContext()).getPontuacao());
-                                getFragmentManager().beginTransaction().replace(R.id.container_exercice,
-                                        new FragmentExerciceInitial2()).commit();
-                            }
-                        })
-                        .create().show();
-            }
-        });
-
-        ((view.findViewById(R.id.exercice_advanced_1_o4))).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                new AlertDialog.Builder(getActivity())
-                        .setTitle("Resposta Correta!")
-                        .setMessage("A maioria dos teclados existentes no mercadoa tualmente traz funçoes multimidia ou web para facilitar o uso do computador.")
-                        .setPositiveButton(R.string.alert_exercice_positive_button, new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                ((CourseApplication) getActivity().getApplicationContext()).calcularPontuacao(33);
-                                Log.i("TAG", "" + ((CourseApplication) getActivity().getApplicationContext()).getPontuacao());
-                                getFragmentManager().beginTransaction().replace(R.id.container_exercice,
-                                        new FragmentExerciceInitial2()).commit();
-                            }
-                        })
-                        .create().show();
-            }
-        });
-
-        ((view.findViewById(R.id.exercice_advanced_1_nao_sei))).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                new AlertDialog.Builder(getActivity())
-                        .setTitle("Ops!")
-                        .setMessage("Parece que você não sabe a resposta! Então vamos lá, a resposta correta é o TECLADO" +
-                                "ele é um periférico de entrada que é instalado automaticamente ao ser inserido no computador." +
-                                "A maioria dos teclados atualmente se conectam através de portas USB e traz funções extras (multimídia ou web) para facilitar o uso do computador e seus programas favoritos.")
+                        .setMessage("A resposta correra é o Editor de Registros," +
+                                "é um programa interno onde guarda as opções e configurações reservadas do sistema.")
                         .setPositiveButton(R.string.alert_exercice_positive_button, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 ((CourseApplication) getActivity().getApplicationContext()).calcularPontuacao(30);
                                 Log.i("TAG", "" + ((CourseApplication) getActivity().getApplicationContext()).getPontuacao());
                                 getFragmentManager().beginTransaction().replace(R.id.container_exercice,
-                                        new FragmentExerciceInitial2()).commit();
+                                        new FragmentExerciceAdvanced3()).commit();
+                            }
+                        })
+                        .create().show();
+            }
+        });
+
+        ((view.findViewById(R.id.exercice_advanced_2_o2))).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new AlertDialog.Builder(getActivity())
+                        .setTitle("Resposta Correta!")
+                        .setMessage("A resposta correra é o Editor de Registros," +
+                                "é um programa interno onde guarda as opções e configurações reservadas do sistema.")
+                        .setPositiveButton(R.string.alert_exercice_positive_button, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                ((CourseApplication) getActivity().getApplicationContext()).calcularPontuacao(30);
+                                Log.i("TAG", "" + ((CourseApplication) getActivity().getApplicationContext()).getPontuacao());
+                                getFragmentManager().beginTransaction().replace(R.id.container_exercice,
+                                        new FragmentExerciceAdvanced3()).commit();
+                            }
+                        })
+                        .create().show();
+            }
+        });
+
+        ((view.findViewById(R.id.exercice_advanced_2_o3))).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new AlertDialog.Builder(getActivity())
+                        .setTitle("Resposta Incorreta!")
+                        .setMessage("A resposta correra é o Editor de Registros," +
+                                "é um programa interno onde guarda as opções e configurações reservadas do sistema.")
+                        .setPositiveButton(R.string.alert_exercice_positive_button, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                ((CourseApplication) getActivity().getApplicationContext()).calcularPontuacao(30);
+                                Log.i("TAG", "" + ((CourseApplication) getActivity().getApplicationContext()).getPontuacao());
+                                getFragmentManager().beginTransaction().replace(R.id.container_exercice,
+                                        new FragmentExerciceAdvanced3()).commit();
+                            }
+                        })
+                        .create().show();
+            }
+        });
+
+        ((view.findViewById(R.id.exercice_advanced_2_o4))).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new AlertDialog.Builder(getActivity())
+                        .setTitle("Resposta Incorreta!")
+                        .setMessage("A resposta correra é o Editor de Registros," +
+                                "é um programa interno onde guarda as opções e configurações reservadas do sistema.")
+                        .setPositiveButton(R.string.alert_exercice_positive_button, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                ((CourseApplication) getActivity().getApplicationContext()).calcularPontuacao(30);
+                                Log.i("TAG", "" + ((CourseApplication) getActivity().getApplicationContext()).getPontuacao());
+                                getFragmentManager().beginTransaction().replace(R.id.container_exercice,
+                                        new FragmentExerciceAdvanced3()).commit();
+                            }
+                        })
+                        .create().show();
+            }
+        });
+
+        ((view.findViewById(R.id.exercice_advanced_2_nao_sei))).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new AlertDialog.Builder(getActivity())
+                        .setTitle("Ops!")
+                        .setMessage("A resposta correra é o Editor de Registros," +
+                                "é um programa interno onde guarda as opções e configurações reservadas do sistema.")
+                        .setPositiveButton(R.string.alert_exercice_positive_button, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                ((CourseApplication) getActivity().getApplicationContext()).calcularPontuacao(30);
+                                Log.i("TAG", "" + ((CourseApplication) getActivity().getApplicationContext()).getPontuacao());
+                                getFragmentManager().beginTransaction().replace(R.id.container_exercice,
+                                        new FragmentExerciceAdvanced3()).commit();
                             }
                         })
                         .create().show();
@@ -127,8 +124,8 @@ public class FragmentExerciceInitial1 extends Fragment {
         return view;
     }
 
-    private void movimentarProgressBar(LayoutInflater inflater, ViewGroup container) {
-        View view = inflater.inflate(R.layout.activity_exercice, container, false);
+    private void movimentarProgressBar(LayoutInflater inflater) {
+        View view = inflater.inflate(R.layout.activity_exercice, null, false);
 
         ProgressBar bar = (ProgressBar) view.findViewById(R.id.progressBar_exercice);
         bar.setProgress(33);

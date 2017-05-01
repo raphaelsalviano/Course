@@ -12,6 +12,7 @@ import java.util.List;
 
 import br.com.usp.willianerodrigues.course.CourseApplication;
 import br.com.usp.willianerodrigues.course.R;
+import br.com.usp.willianerodrigues.course.fragments.FragmentExerciceAdvanced1;
 import br.com.usp.willianerodrigues.course.fragments.FragmentExerciceInitial1;
 import br.com.usp.willianerodrigues.course.fragments.FragmentUserAdvancedWill;
 import br.com.usp.willianerodrigues.course.model.ItemMenu;
@@ -36,23 +37,13 @@ public class ExerciceActivity extends AppCompatActivity implements View.OnClickL
 
         if (local.equalsIgnoreCase("advanced")) {
             getSupportFragmentManager().beginTransaction().replace(R.id.container_exercice,
-                    new FragmentExerciceInitial1()).commit();
+                    new FragmentExerciceAdvanced1()).commit();
         } else if (local.equalsIgnoreCase("apresentacao")) {
             getSupportFragmentManager().beginTransaction().replace(R.id.container_exercice,
                     new FragmentExerciceInitial1()).commit();
         } else if (local.equalsIgnoreCase("main")) {
             String itemText = getIntent().getExtras().getString("item");
-            try {
-                List<ItemMenu> itemMenus = application.getAllItens();
-                for (ItemMenu item : itemMenus) {
-                    if (item.getName().equalsIgnoreCase(itemText)) {
-                        getSupportFragmentManager().beginTransaction().replace(R.id.container_exercice,
-                                new FragmentExerciceInitial1()).commit();
-                    }
-                }
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
+
         }
     }
 

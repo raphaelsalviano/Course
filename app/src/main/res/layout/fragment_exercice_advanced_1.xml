@@ -13,29 +13,10 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:gravity="start"
-        android:text="Um determinado periférico acoplado a CPU de um PC possui as seguintes características:"
+        android:text="É um fabricante apenas de Hardware:"
         android:textColor="@color/md_text"
         android:textSize="16sp" />
 
-    <br.com.usp.willianerodrigues.course.util.RobotoRegular
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:layout_marginTop="8dp"
-        android:gravity="start"
-        android:text="- é especificamente um dispositivo de entrada;\n- é um dispositivo Plug and Play;\n- pode-se conectar a CPU através de portas USB;\n- alguns modelos possuem recursos para multimídia e/ou navegação na internet."
-        android:textColor="@color/md_secondary_text_icons"
-        android:textSize="16sp" />
-
-    <br.com.usp.willianerodrigues.course.util.RobotoBold
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:layout_marginTop="8dp"
-        android:gravity="start"
-        android:text="Qual periférico possui tais características?"
-        android:textColor="@color/md_text"
-        android:textSize="16sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -59,7 +40,7 @@
                 android:layout_width="64dp"
                 android:layout_height="64dp"
                 android:layout_margin="8dp"
-                app:srcCompat="@drawable/monitor"
+                app:srcCompat="@drawable/apple_logo"
                 android:contentDescription="@string/img_description" />
 
             <br.com.usp.willianerodrigues.course.util.RobotoRegular
@@ -68,7 +49,7 @@
                 android:layout_gravity="bottom"
                 android:layout_margin="8dp"
                 android:gravity="center"
-                android:text="Monitor"
+                android:text="Apple"
                 android:textColor="@color/md_purple_500"
                 android:textSize="14sp" />
 
@@ -88,7 +69,7 @@
                 android:layout_width="64dp"
                 android:layout_height="64dp"
                 android:layout_margin="8dp"
-                app:srcCompat="@drawable/impressora"
+                app:srcCompat="@drawable/microsoft_logo"
                 android:contentDescription="@string/img_description" />
 
             <br.com.usp.willianerodrigues.course.util.RobotoRegular
@@ -97,7 +78,7 @@
                 android:layout_gravity="bottom"
                 android:layout_margin="8dp"
                 android:gravity="center"
-                android:text="Impressora"
+                android:text="Microsoft"
                 android:textColor="@color/md_purple_500"
                 android:textSize="14sp" />
 
@@ -127,7 +108,7 @@
                 android:layout_width="64dp"
                 android:layout_height="64dp"
                 android:layout_margin="8dp"
-                app:srcCompat="@drawable/pendrive"
+                app:srcCompat="@drawable/dell_logo"
                 android:contentDescription="@string/img_description" />
 
             <br.com.usp.willianerodrigues.course.util.RobotoRegular
@@ -136,7 +117,7 @@
                 android:layout_gravity="bottom"
                 android:layout_margin="8dp"
                 android:gravity="center"
-                android:text="Pendrive"
+                android:text="Dell"
                 android:textColor="@color/md_purple_500"
                 android:textSize="14sp" />
 
@@ -156,7 +137,7 @@
                 android:layout_width="64dp"
                 android:layout_height="64dp"
                 android:layout_margin="8dp"
-                app:srcCompat="@drawable/teclado"
+                app:srcCompat="@drawable/google_logo"
                 android:contentDescription="@string/img_description" />
 
             <br.com.usp.willianerodrigues.course.util.RobotoRegular
@@ -165,7 +146,7 @@
                 android:layout_gravity="bottom"
                 android:layout_margin="8dp"
                 android:gravity="center"
-                android:text="Teclado"
+                android:text="Google"
                 android:textColor="@color/md_purple_500"
                 android:textSize="14sp" />
 

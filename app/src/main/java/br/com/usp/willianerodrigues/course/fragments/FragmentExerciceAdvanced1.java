@@ -13,11 +13,11 @@ import android.widget.ProgressBar;
 import br.com.usp.willianerodrigues.course.CourseApplication;
 import br.com.usp.willianerodrigues.course.R;
 
-public class FragmentExerciceInitial1 extends Fragment {
+public class FragmentExerciceAdvanced1 extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_exercice_initial_1, container, false);
+        View view = inflater.inflate(R.layout.fragment_exercice_advanced_1, container, false);
 
         movimentarProgressBar(inflater, container);
 
@@ -26,16 +26,15 @@ public class FragmentExerciceInitial1 extends Fragment {
             public void onClick(View v) {
                 new AlertDialog.Builder(getActivity())
                         .setTitle("Resposta Incorreta!")
-                        .setMessage("A resposta correta é o TECLADO" +
-                                "ele é um periférico de entrada que é instalado automaticamente ao ser inserido no computador." +
-                                "A maioria dos teclados atualmente se conectam através de portas USB e traz funções extras (multimídia ou web) para facilitar o uso do computador e seus programas favoritos.")
+                        .setMessage("A resposta correta é a Dell ou Apple," +
+                                "as duas empresas são empresas que vendem apenas hardware.")
                         .setPositiveButton(R.string.alert_exercice_positive_button, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 ((CourseApplication) getActivity().getApplicationContext()).calcularPontuacao(28);
                                 Log.i("TAG", "" + ((CourseApplication) getActivity().getApplicationContext()).getPontuacao());
-                               getFragmentManager().beginTransaction().replace(R.id.container_exercice,
-                                        new FragmentExerciceInitial2()).commit();
+                                getFragmentManager().beginTransaction().replace(R.id.container_exercice,
+                                        new FragmentExerciceAdvanced2()).commit();
                             }
                         })
                         .create().show();
@@ -47,16 +46,15 @@ public class FragmentExerciceInitial1 extends Fragment {
             public void onClick(View v) {
                 new AlertDialog.Builder(getActivity())
                         .setTitle("Resposta Incorreta!")
-                        .setMessage("A resposta correta é o TECLADO" +
-                                "ele é um periférico de entrada que é instalado automaticamente ao ser inserido no computador." +
-                                "A maioria dos teclados atualmente se conectam através de portas USB e traz funções extras (multimídia ou web) para facilitar o uso do computador e seus programas favoritos.")
+                        .setMessage("A resposta correta é a Dell ou Apple," +
+                                "as duas empresas são empresas que vendem apenas hardware.")
                         .setPositiveButton(R.string.alert_exercice_positive_button, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 ((CourseApplication) getActivity().getApplicationContext()).calcularPontuacao(28);
                                 Log.i("TAG", "" + ((CourseApplication) getActivity().getApplicationContext()).getPontuacao());
                                 getFragmentManager().beginTransaction().replace(R.id.container_exercice,
-                                        new FragmentExerciceInitial2()).commit();
+                                        new FragmentExerciceAdvanced2()).commit();
                             }
                         })
                         .create().show();
@@ -68,16 +66,15 @@ public class FragmentExerciceInitial1 extends Fragment {
             public void onClick(View v) {
                 new AlertDialog.Builder(getActivity())
                         .setTitle("Resposta Incorreta!")
-                        .setMessage("A resposta correta é o TECLADO" +
-                                "ele é um periférico de entrada que é instalado automaticamente ao ser inserido no computador." +
-                                "A maioria dos teclados atualmente se conectam através de portas USB e traz funções extras (multimídia ou web) para facilitar o uso do computador e seus programas favoritos.")
+                        .setMessage("A resposta correta é a Dell ou Apple," +
+                                "as duas empresas são empresas que vendem apenas hardware.")
                         .setPositiveButton(R.string.alert_exercice_positive_button, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 ((CourseApplication) getActivity().getApplicationContext()).calcularPontuacao(28);
                                 Log.i("TAG", "" + ((CourseApplication) getActivity().getApplicationContext()).getPontuacao());
                                 getFragmentManager().beginTransaction().replace(R.id.container_exercice,
-                                        new FragmentExerciceInitial2()).commit();
+                                        new FragmentExerciceAdvanced2()).commit();
                             }
                         })
                         .create().show();
@@ -89,14 +86,15 @@ public class FragmentExerciceInitial1 extends Fragment {
             public void onClick(View v) {
                 new AlertDialog.Builder(getActivity())
                         .setTitle("Resposta Correta!")
-                        .setMessage("A maioria dos teclados existentes no mercadoa tualmente traz funçoes multimidia ou web para facilitar o uso do computador.")
+                        .setMessage("A Dell e a Apple," +
+                                "as duas empresas são empresas que vendem apenas hardware.")
                         .setPositiveButton(R.string.alert_exercice_positive_button, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 ((CourseApplication) getActivity().getApplicationContext()).calcularPontuacao(33);
                                 Log.i("TAG", "" + ((CourseApplication) getActivity().getApplicationContext()).getPontuacao());
                                 getFragmentManager().beginTransaction().replace(R.id.container_exercice,
-                                        new FragmentExerciceInitial2()).commit();
+                                        new FragmentExerciceAdvanced2()).commit();
                             }
                         })
                         .create().show();
@@ -108,16 +106,15 @@ public class FragmentExerciceInitial1 extends Fragment {
             public void onClick(View v) {
                 new AlertDialog.Builder(getActivity())
                         .setTitle("Ops!")
-                        .setMessage("Parece que você não sabe a resposta! Então vamos lá, a resposta correta é o TECLADO" +
-                                "ele é um periférico de entrada que é instalado automaticamente ao ser inserido no computador." +
-                                "A maioria dos teclados atualmente se conectam através de portas USB e traz funções extras (multimídia ou web) para facilitar o uso do computador e seus programas favoritos.")
+                        .setMessage("A resposta correta é a Dell ou Apple," +
+                                "as duas empresas são empresas que vendem apenas hardware.")
                         .setPositiveButton(R.string.alert_exercice_positive_button, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 ((CourseApplication) getActivity().getApplicationContext()).calcularPontuacao(30);
                                 Log.i("TAG", "" + ((CourseApplication) getActivity().getApplicationContext()).getPontuacao());
                                 getFragmentManager().beginTransaction().replace(R.id.container_exercice,
-                                        new FragmentExerciceInitial2()).commit();
+                                        new FragmentExerciceAdvanced2()).commit();
                             }
                         })
                         .create().show();

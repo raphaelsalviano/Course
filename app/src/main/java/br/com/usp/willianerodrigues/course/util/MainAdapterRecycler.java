@@ -47,9 +47,11 @@ public class MainAdapterRecycler extends RecyclerView.Adapter<MainAdapterRecycle
           holder.mTextButton.setText(itemMenu.getName());
 
           if (itemMenu.isDisable()) {
+              holder.mViewClick.setBackground(context.getResources().getDrawable(R.drawable.border_button_grey));
                holder.mImageButton.setImageDrawable(context.getResources().getDrawable(itemMenu.getDrawableDisableId()));
                holder.mTextButton.setTextColor(context.getResources().getColor(R.color.md_grey_500));
           } else {
+              holder.mViewClick.setBackground(context.getResources().getDrawable(R.drawable.border_button_purple));
                holder.mImageButton.setImageDrawable(context.getResources().getDrawable(itemMenu.getDrawableEnableId()));
                holder.mTextButton.setTextColor(context.getResources().getColor(R.color.md_purple_500));
           }

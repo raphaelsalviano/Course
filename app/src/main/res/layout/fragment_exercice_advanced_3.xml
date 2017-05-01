@@ -12,12 +12,13 @@
         android:layout_weight="1"
         android:layout_gravity="bottom"
         android:gravity="start"
-        android:text="Qual o nome do processo feito por entusiastas e profissionais que aumenta a frenquencia e velocidade do processador?"
+        android:text="O nome do editor de texto com uam quantidade maior de recursos que já vem por padrão em todas as versões do Microsoft Windows é o Office Word?"
         android:textColor="@color/md_text"
         android:textSize="16sp" />
 
+
     <LinearLayout
-        android:id="@+id/exercice_advanced_2_o1"
+        android:id="@+id/exercice_advanced_3_o1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/border_button_purple"
@@ -32,14 +33,14 @@
             android:layout_gravity="bottom"
             android:layout_margin="16dp"
             android:gravity="center"
-            android:text="Multiprogramação."
+            android:text="Certo"
             android:textColor="@color/md_purple_500"
             android:textSize="14sp" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/exercice_advanced_2_o2"
+        android:id="@+id/exercice_advanced_3_o2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/border_button_purple"
@@ -54,59 +55,14 @@
             android:layout_gravity="bottom"
             android:layout_margin="16dp"
             android:gravity="center"
-            android:text="Overclock."
+            android:text="Errado"
             android:textColor="@color/md_purple_500"
             android:textSize="14sp" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/exercice_advanced_2_o3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/border_button_purple"
-        android:clickable="true"
-        android:layout_marginTop="8dp"
-        android:gravity="center"
-        android:orientation="vertical">
-
-        <br.com.usp.willianerodrigues.course.util.RobotoRegular
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_margin="16dp"
-            android:gravity="center"
-            android:text="Pipeline."
-            android:textColor="@color/md_purple_500"
-            android:textSize="14sp" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/exercice_advanced_2_o4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/border_button_purple"
-        android:clickable="true"
-        android:layout_marginTop="8dp"
-        android:gravity="center"
-        android:orientation="vertical">
-
-        <br.com.usp.willianerodrigues.course.util.RobotoRegular
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_margin="16dp"
-            android:gravity="center"
-            android:text="Pós-fetch."
-            android:textColor="@color/md_purple_500"
-            android:textSize="14sp" />
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:id="@+id/exercice_advanced_2_nao_sei"
+        android:id="@+id/exercice_advanced_3_nao_sei"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/border_button_purple"

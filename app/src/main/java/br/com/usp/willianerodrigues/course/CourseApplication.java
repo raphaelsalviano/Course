@@ -11,10 +11,10 @@ import br.com.usp.willianerodrigues.course.database.ORMController;
 import br.com.usp.willianerodrigues.course.model.ItemMenu;
 import br.com.usp.willianerodrigues.course.model.Usuario;
 
-public class CourseApplication extends Application implements DBMethods {
+public class CourseApplication extends Application {
 
-    public static final String APP_VERSION = "1.0";
-    private int pontuacao = 0;
+    public static final String APP_VERSION = "1.1";
+    private int pontuacao;
 
     private ORMController controller;
 
@@ -22,6 +22,7 @@ public class CourseApplication extends Application implements DBMethods {
     public void onCreate () {
         super.onCreate();
         controller = new ORMController(getApplicationContext());
+        this.pontuacao = 0;
 
     }
 
@@ -32,54 +33,48 @@ public class CourseApplication extends Application implements DBMethods {
     }
 
 
-    @Override
     public void createOrUpdateUser (Usuario usuario) throws SQLException {
         controller.createOrUpdateUser(usuario);
     }
 
-    @Override
     public void removeUser (Usuario usuario) throws SQLException {
         controller.removeUser(usuario);
     }
 
-    @Override
     public Usuario getUserActive () throws SQLException {
         return controller.getUserActive();
     }
 
-    @Override
     public List<Usuario> getAllUser () throws SQLException {
         return controller.getAllUser();
     }
 
-    @Override
     public Usuario searchUserByUser (String usuario) throws SQLException {
         return controller.searchUserByUser(usuario);
     }
 
-    public int calcularPontuacao(int porcentagemConcluida){
-        return (50 * porcentagemConcluida) / 100;
+    public void calcularPontuacao(int porcentagemConcluida) {
+        this.pontuacao = ((50 * porcentagemConcluida) / 100) + this.pontuacao;
     }
 
-    public void inserirPontuacaoUser(int pontuacao) throws Exception{
+    public void inserirPontuacaoUser() throws Exception {
         Usuario usuario = getUserActive();
         if(usuario == null){
             throw new Exception("Usuário vazio");
         }
-        usuario.setPontuacao(pontuacao);
+        usuario.setPontuacao(this.pontuacao);
         createOrUpdateUser(usuario);
     }
 
-    @Override
     public List<ItemMenu> getAllItens () throws SQLException {
         return controller.getAllItens();
     }
 
     public int getPontuacao() {
-        return pontuacao;
+        return this.pontuacao;
     }
 
-    public void setPontuacao(int pontuacao) {
-        this.pontuacao = pontuacao;
+    public void resetPontuacao() {
+        this.pontuacao = 0;
     }
 }

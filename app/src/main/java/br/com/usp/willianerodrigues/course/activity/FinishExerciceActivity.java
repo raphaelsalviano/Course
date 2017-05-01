@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ProgressBar;
@@ -25,29 +26,42 @@ public class FinishExerciceActivity extends AppCompatActivity {
         setContentView(R.layout.activity_finish_exercice);
 
         application = (CourseApplication) getApplicationContext();
-        application.setPontuacao(application.calcularPontuacao(100));
+        Usuario usuario = null;
+
+        TextView pontuacao = (TextView) findViewById(R.id.text_pontuacao);
+        ProgressBar bar = (ProgressBar) findViewById(R.id.progressBar_finish_exercice);
+        bar.setMax(16);
+        bar.setIndeterminate(false);
+        TextView porcentagemNivel = (TextView) findViewById(R.id.porcentagem_concluido);
+        TextView textoMeta = (TextView) findViewById(R.id.texto_de_meta);
+        TextView MenssagemMeta = (TextView) findViewById(R.id.messagem_texto_de_meta);
+
+        try {
+            usuario = application.getUserActive();
+            if (usuario != null) {
+                application.inserirPontuacaoUser();
+                application.resetPontuacao();
+                pontuacao.setText(usuario.getPontuacao());
+                bar.setProgress(usuario.getPontuacao());
+                porcentagemNivel.setText((usuario.getPontuacao() * 100) / 16);
+            } else {
+                Log.i("TAG", "Exception");
+                pontuacao.setText(application.getPontuacao());
+                bar.setProgress(application.getPontuacao());
+                porcentagemNivel.setText((application.getPontuacao() * 100) / 46);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_finish_exercice);
         setSupportActionBar(toolbar);
-        if(getSupportActionBar() != null){
+        if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(false);
             getSupportActionBar().setTitle("");
         }
 
-        TextView pontuacao = (TextView) findViewById(R.id.text_pontuacao);
-        pontuacao.setText(""+application.getPontuacao());
-        ProgressBar bar = (ProgressBar) findViewById(R.id.progressBar_finish_exercice);
-        bar.setProgress(application.getPontuacao());
-        TextView porcentagemNivel = (TextView) findViewById(R.id.porcentagem_concluido);
-        porcentagemNivel.setText(""+application.getPontuacao());
-        TextView textoMeta = (TextView) findViewById(R.id.texto_de_meta);
-        TextView MenssagemMeta = (TextView) findViewById(R.id.messagem_texto_de_meta);
-
-        try{
-            application.inserirPontuacaoUser(application.getPontuacao());
-        }catch (Exception e){
-            e.getMessage();
-        }
     }
 
     @Override

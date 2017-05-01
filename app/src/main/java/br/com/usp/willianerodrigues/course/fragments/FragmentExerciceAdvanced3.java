@@ -15,11 +15,11 @@ import br.com.usp.willianerodrigues.course.CourseApplication;
 import br.com.usp.willianerodrigues.course.R;
 import br.com.usp.willianerodrigues.course.activity.FinishExerciceActivity;
 
-public class FragmentExerciceInitial3 extends Fragment {
+public class FragmentExerciceAdvanced3 extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_exercice_initial_3, container, false);
+        View view = inflater.inflate(R.layout.fragment_exercice_advanced_3, container, false);
 
         movimentarProgressBar(inflater);
 
@@ -28,9 +28,8 @@ public class FragmentExerciceInitial3 extends Fragment {
             public void onClick(View v) {
                 new AlertDialog.Builder(getActivity())
                         .setTitle("Resposta Incorreta!")
-                        .setMessage("A resposta correta é o BIT.\n" +
-                                "Bit (simplificação para dígito binário, \" Binary digit \" em inglês) é a menor unidade de informação que pode ser armazenada ou transmitida, usada na Computação e na Teoria da Informação. Um bit pode assumir somente 2 valores: 0 ou 1, corte ou passagem de energia respectivamente.\n" +
-                                "Embora os computadores tenham instruções (ou comandos) que possam testar e manipular bits, geralmente são idealizados para armazenar instruções em múltiplos de bits, chamados bytes.")
+                        .setMessage("A resposta correta é o Wordpad.\n" +
+                                "Trata-se de uma aplicação de processamento de texto que apresenta apenas as ferramentas básicas de formatação de texto. Nas versões fornecidas com os Windows 95, 98 e ME, o WordPad permite abrir e guardar ficheiros nos formatos.")
                         .setPositiveButton(R.string.alert_exercice_positive_button, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
@@ -50,9 +49,8 @@ public class FragmentExerciceInitial3 extends Fragment {
             public void onClick(View v) {
                 new AlertDialog.Builder(getActivity())
                         .setTitle("Resposta Correta!")
-                        .setMessage("O OVERCLOCK," +
-                                "Bit (simplificação para dígito binário, \" Binary digit \" em inglês) é a menor unidade de informação que pode ser armazenada ou transmitida, usada na Computação e na Teoria da Informação. Um bit pode assumir somente 2 valores: 0 ou 1, corte ou passagem de energia respectivamente.\n" +
-                                "Embora os computadores tenham instruções (ou comandos) que possam testar e manipular bits, geralmente são idealizados para armazenar instruções em múltiplos de bits, chamados bytes.")
+                        .setMessage("A resposta correta é o Wordpad.\n" +
+                                "Trata-se de uma aplicação de processamento de texto que apresenta apenas as ferramentas básicas de formatação de texto. Nas versões fornecidas com os Windows 95, 98 e ME, o WordPad permite abrir e guardar ficheiros nos formatos.")
                         .setPositiveButton(R.string.alert_exercice_positive_button, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
@@ -72,9 +70,8 @@ public class FragmentExerciceInitial3 extends Fragment {
             public void onClick(View v) {
                 new AlertDialog.Builder(getActivity())
                         .setTitle("Ops!")
-                        .setMessage("Parece que você não sabe a resposta! Então vamos lá, a resposta correta é BIT." +
-                                "Bit (simplificação para dígito binário, \" Binary digit \" em inglês) é a menor unidade de informação que pode ser armazenada ou transmitida, usada na Computação e na Teoria da Informação. Um bit pode assumir somente 2 valores: 0 ou 1, corte ou passagem de energia respectivamente.\n" +
-                                "Embora os computadores tenham instruções (ou comandos) que possam testar e manipular bits, geralmente são idealizados para armazenar instruções em múltiplos de bits, chamados bytes.")
+                        .setMessage("Parece que você não sabe a resposta! Então vamos lá, a resposta correta é Wordpad." +
+                                "Trata-se de uma aplicação de processamento de texto que apresenta apenas as ferramentas básicas de formatação de texto. Nas versões fornecidas com os Windows 95, 98 e ME, o WordPad permite abrir e guardar ficheiros nos formatos.")
                         .setPositiveButton(R.string.alert_exercice_positive_button, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {

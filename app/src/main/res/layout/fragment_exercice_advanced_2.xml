@@ -12,7 +12,7 @@
         android:layout_weight="1"
         android:layout_gravity="bottom"
         android:gravity="start"
-        android:text="Qual o nome do processo feito por entusiastas e profissionais que aumenta a frenquencia e velocidade do processador?"
+        android:text="Qual é o tipo de banco de dados que armazena as configurações e opções do sistema operacional Microsoft Windows?"
         android:textColor="@color/md_text"
         android:textSize="16sp" />
 
@@ -32,7 +32,7 @@
             android:layout_gravity="bottom"
             android:layout_margin="16dp"
             android:gravity="center"
-            android:text="Multiprogramação."
+            android:text="Barra de ferramentas"
             android:textColor="@color/md_purple_500"
             android:textSize="14sp" />
 
@@ -54,7 +54,7 @@
             android:layout_gravity="bottom"
             android:layout_margin="16dp"
             android:gravity="center"
-            android:text="Overclock."
+            android:text="Editor de registros"
             android:textColor="@color/md_purple_500"
             android:textSize="14sp" />
 
@@ -76,7 +76,7 @@
             android:layout_gravity="bottom"
             android:layout_margin="16dp"
             android:gravity="center"
-            android:text="Pipeline."
+            android:text="Painel de Controle"
             android:textColor="@color/md_purple_500"
             android:textSize="14sp" />
 
@@ -98,7 +98,7 @@
             android:layout_gravity="bottom"
             android:layout_margin="16dp"
             android:gravity="center"
-            android:text="Pós-fetch."
+            android:text="Prompt de comando"
             android:textColor="@color/md_purple_500"
             android:textSize="14sp" />
 

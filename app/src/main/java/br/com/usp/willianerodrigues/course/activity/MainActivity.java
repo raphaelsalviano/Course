@@ -13,6 +13,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import java.sql.SQLException;
 
@@ -98,7 +99,7 @@ public class MainActivity extends AppCompatActivity
             startActivity(intent);
             finish();
         } else if (id == R.id.nav_settings) {
-
+            Toast.makeText(this, "Em breve você poderá acessar essa função", Toast.LENGTH_SHORT).show();
         } else if (id == R.id.nav_exit) {
             try {
                 Usuario usuario = application.getUserActive();

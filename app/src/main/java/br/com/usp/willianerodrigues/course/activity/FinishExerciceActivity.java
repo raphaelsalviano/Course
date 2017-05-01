@@ -10,6 +10,8 @@ import android.view.MenuItem;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.github.lzyzsd.circleprogress.DonutProgress;
+
 import java.sql.SQLException;
 
 import br.com.usp.willianerodrigues.course.CourseApplication;
@@ -28,10 +30,9 @@ public class FinishExerciceActivity extends AppCompatActivity {
         application = (CourseApplication) getApplicationContext();
         Usuario usuario = null;
 
+        DonutProgress progress = (DonutProgress) findViewById(R.id.donut_progress);
+        progress.setMax(48);
         TextView pontuacao = (TextView) findViewById(R.id.text_pontuacao);
-        ProgressBar bar = (ProgressBar) findViewById(R.id.progressBar_finish_exercice);
-        bar.setMax(16);
-        bar.setIndeterminate(false);
         TextView porcentagemNivel = (TextView) findViewById(R.id.porcentagem_concluido);
         TextView textoMeta = (TextView) findViewById(R.id.texto_de_meta);
         TextView MenssagemMeta = (TextView) findViewById(R.id.messagem_texto_de_meta);
@@ -42,12 +43,14 @@ public class FinishExerciceActivity extends AppCompatActivity {
                 application.inserirPontuacaoUser();
                 application.resetPontuacao();
                 pontuacao.setText(usuario.getPontuacao());
-                bar.setProgress(usuario.getPontuacao());
+                progress.setDonut_progress("" + usuario.getPontuacao());
+                progress.setProgress(usuario.getPontuacao());
                 porcentagemNivel.setText((usuario.getPontuacao() * 100) / 16);
             } else {
                 Log.i("TAG", "Exception");
                 pontuacao.setText(application.getPontuacao());
-                bar.setProgress(application.getPontuacao());
+                progress.setDonut_progress("" + application.getPontuacao());
+                progress.setProgress(application.getPontuacao());
                 porcentagemNivel.setText((application.getPontuacao() * 100) / 46);
             }
         } catch (Exception e) {

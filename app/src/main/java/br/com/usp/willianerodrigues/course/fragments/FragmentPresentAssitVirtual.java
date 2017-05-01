@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
+import com.wang.avi.AVLoadingIndicatorView;
 
 import br.com.usp.willianerodrigues.course.R;
 import br.com.usp.willianerodrigues.course.activity.ExerciceActivity;
@@ -24,10 +25,8 @@ public class FragmentPresentAssitVirtual extends Fragment {
                               Bundle savedInstanceState) {
         final View view = inflater.inflate(R.layout.fragment_present_asst_virtual, container, false);
 
-        final ImageView mWill = (ImageView) view.findViewById(R.id.will_virtual_present);
-        mWill.setBackground(getResources().getDrawable(R.drawable.will_assistants_animation));
-        final AnimationDrawable animation = (AnimationDrawable) mWill.getBackground();
-        animation.start();
+        AVLoadingIndicatorView avi = (AVLoadingIndicatorView) view.findViewById(R.id.avi);
+        avi.show();
 
         final TextView mText1 = (TextView) view.findViewById(R.id.will_talk_question_home);
         YoYo.with(Techniques.FadeIn).duration(1000).playOn(mText1);
@@ -36,7 +35,6 @@ public class FragmentPresentAssitVirtual extends Fragment {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run () {
-                YoYo.with(Techniques.BounceInUp).duration(500).playOn(mWill);
 
                 TextView mText2 = (TextView) view.findViewById(R.id.will_talk_question_home2);
                 YoYo.with(Techniques.FadeIn).duration(500).playOn(mText2);

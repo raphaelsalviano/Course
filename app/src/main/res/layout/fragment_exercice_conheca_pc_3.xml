@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingBottom="16dp"
+    android:paddingRight="16dp"
+    android:paddingLeft="16dp">
+
+    <br.com.usp.willianerodrigues.course.util.RobotoBold
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:gravity="start"
+        android:text="Selcione a imagem correta de acordo com a descrição abaixo:"
+        android:textColor="@color/md_text"
+        android:textSize="16sp" />
+
+    <br.com.usp.willianerodrigues.course.util.RobotoRegular
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="8dp"
+        android:gravity="start"
+        android:text="Armazenar temporariamente os programas e os arquivos aberto para que o processador possa acessa-los."
+        android:textColor="@color/md_secondary_text_icons"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp">
+
+        <LinearLayout
+            android:id="@+id/exercice_advanced_1_o1"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/border_button_purple"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_margin="8dp"
+                app:srcCompat="@drawable/teclado"
+                android:contentDescription="@string/img_description" />
+
+            <br.com.usp.willianerodrigues.course.util.RobotoRegular
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:text="Teclado"
+                android:textColor="@color/md_purple_500"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/exercice_advanced_1_o2"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_button_purple"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_margin="8dp"
+                app:srcCompat="@drawable/memoria_ram"
+                android:contentDescription="@string/img_description" />
+
+            <br.com.usp.willianerodrigues.course.util.RobotoRegular
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:text="Memória RAM"
+                android:textColor="@color/md_purple_500"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+
+        <LinearLayout
+            android:id="@+id/exercice_advanced_1_o3"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/border_button_purple"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_margin="8dp"
+                app:srcCompat="@drawable/pendrive"
+                android:contentDescription="@string/img_description" />
+
+            <br.com.usp.willianerodrigues.course.util.RobotoRegular
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:text="Pendrive"
+                android:textColor="@color/md_purple_500"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/exercice_advanced_1_o4"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_button_purple"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_margin="8dp"
+                app:srcCompat="@drawable/hdd"
+                android:contentDescription="@string/img_description" />
+
+            <br.com.usp.willianerodrigues.course.util.RobotoRegular
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:text="Hard Disk (HD)"
+                android:textColor="@color/md_purple_500"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/exercice_advanced_1_nao_sei"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_button_purple"
+        android:clickable="true"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <br.com.usp.willianerodrigues.course.util.RobotoRegular
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_margin="16dp"
+            android:gravity="center"
+            android:text="Não sei"
+            android:textColor="@color/md_purple_500"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

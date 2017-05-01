@@ -8,11 +8,13 @@ import android.os.Bundle;
 import android.view.View;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 import br.com.usp.willianerodrigues.course.CourseApplication;
 import br.com.usp.willianerodrigues.course.R;
 import br.com.usp.willianerodrigues.course.fragments.FragmentExerciceAdvanced1;
+import br.com.usp.willianerodrigues.course.fragments.FragmentExerciceConhecaPc1;
 import br.com.usp.willianerodrigues.course.fragments.FragmentExerciceInitial1;
 import br.com.usp.willianerodrigues.course.fragments.FragmentUserAdvancedWill;
 import br.com.usp.willianerodrigues.course.model.ItemMenu;
@@ -27,6 +29,14 @@ public class ExerciceActivity extends AppCompatActivity implements View.OnClickL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exercice);
 
+        List<ItemMenu> itemMenus = new ArrayList<>();
+
+        try {
+            itemMenus = application.getAllItens();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
         application = (CourseApplication) getApplicationContext();
 
         if (getIntent().getExtras() != null) {
@@ -36,13 +46,35 @@ public class ExerciceActivity extends AppCompatActivity implements View.OnClickL
         ((findViewById(R.id.close_exercice))).setOnClickListener(this);
 
         if (local.equalsIgnoreCase("advanced")) {
+            application.resetPontuacao();
             getSupportFragmentManager().beginTransaction().replace(R.id.container_exercice,
                     new FragmentExerciceAdvanced1()).commit();
         } else if (local.equalsIgnoreCase("apresentacao")) {
+            application.resetPontuacao();
             getSupportFragmentManager().beginTransaction().replace(R.id.container_exercice,
                     new FragmentExerciceInitial1()).commit();
         } else if (local.equalsIgnoreCase("main")) {
+            application.resetPontuacao();
             String itemText = getIntent().getExtras().getString("item");
+            if (itemText.equalsIgnoreCase(itemMenus.get(0).getName())) {
+                getSupportFragmentManager().beginTransaction().replace(R.id.container_exercice,
+                        new FragmentExerciceConhecaPc1()).commit();
+            } else if (itemText.equalsIgnoreCase(itemMenus.get(1).getName())) {
+                getSupportFragmentManager().beginTransaction().replace(R.id.container_exercice,
+                        new FragmentExerciceInitial1()).commit();
+            } else if (itemText.equalsIgnoreCase(itemMenus.get(2).getName())) {
+                getSupportFragmentManager().beginTransaction().replace(R.id.container_exercice,
+                        new FragmentExerciceInitial1()).commit();
+            } else if (itemText.equalsIgnoreCase(itemMenus.get(3).getName())) {
+                getSupportFragmentManager().beginTransaction().replace(R.id.container_exercice,
+                        new FragmentExerciceInitial1()).commit();
+            } else if (itemText.equalsIgnoreCase(itemMenus.get(4).getName())) {
+                getSupportFragmentManager().beginTransaction().replace(R.id.container_exercice,
+                        new FragmentExerciceInitial1()).commit();
+            } else if (itemText.equalsIgnoreCase(itemMenus.get(5).getName())) {
+                getSupportFragmentManager().beginTransaction().replace(R.id.container_exercice,
+                        new FragmentExerciceInitial1()).commit();
+            }
 
         }
     }

@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
+import com.wang.avi.AVLoadingIndicatorView;
 
 import br.com.usp.willianerodrigues.course.R;
 import br.com.usp.willianerodrigues.course.activity.ExerciceActivity;
@@ -28,10 +29,8 @@ public class FragmentUserAdvancedWill extends Fragment {
             getActivity().getActionBar().hide();
         }
 
-        ImageView mWill = (ImageView) view.findViewById(R.id.img_will_advanced);
-        mWill.setBackground(getResources().getDrawable(R.drawable.will_assistants_animation));
-        final AnimationDrawable animation = (AnimationDrawable) mWill.getBackground();
-        animation.start();
+        AVLoadingIndicatorView avi = (AVLoadingIndicatorView) view.findViewById(R.id.avi);
+        avi.show();
 
         final TextView mText1 = (TextView) view.findViewById(R.id.will_talk_question_advanced);
         YoYo.with(Techniques.FadeIn).duration(1000).playOn(mText1);

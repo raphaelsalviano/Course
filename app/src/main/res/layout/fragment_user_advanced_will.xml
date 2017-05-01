@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -12,11 +13,14 @@
         android:orientation="vertical"
         android:padding="16dp">
 
-        <ImageView
-            android:id="@+id/img_will_advanced"
-            android:layout_width="128dp"
-            android:layout_height="128dp"
-            android:contentDescription="@string/img_description" />
+        <com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/avi"
+            style="@style/AVLoadingIndicatorView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:indicatorColor="#801f9f"
+            app:indicatorName="LineScalePulseOutIndicator" />
 
         <br.com.usp.willianerodrigues.course.util.RobotoRegular
             android:id="@+id/will_talk_question_advanced"

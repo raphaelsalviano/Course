@@ -18,6 +18,8 @@ public interface DBMethods {
 
      Usuario searchUserByUser(String usuario) throws SQLException;
 
+    void createOrUpdateItemMenu(ItemMenu itemMenu) throws SQLException;
+
      List<ItemMenu> getAllItens() throws SQLException;
 
 

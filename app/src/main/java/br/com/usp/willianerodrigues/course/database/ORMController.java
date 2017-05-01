@@ -74,6 +74,11 @@ public class ORMController implements DBMethods {
      }
 
      @Override
+     public void createOrUpdateItemMenu(ItemMenu itemMenu) throws SQLException {
+         menuDao.createOrUpdate(itemMenu);
+     }
+
+    @Override
      public List<ItemMenu> getAllItens () throws SQLException {
           return menuDao.queryForAll();
      }

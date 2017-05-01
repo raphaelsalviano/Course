@@ -36,6 +36,7 @@ public class FragmentExerciceConhecaPc3 extends Fragment {
                                 ((CourseApplication) getActivity().getApplicationContext()).calcularPontuacao(28);
                                 Log.i("TAG", "" + ((CourseApplication) getActivity().getApplicationContext()).getPontuacao());
                                 Intent intent = new Intent(getActivity(), FinishExerciceActivity.class);
+                                intent.putExtra("passou", getActivity().getResources().getString(R.string.know_computer));
                                 getActivity().startActivity(intent);
                                 getActivity().finish();
                             }
@@ -56,6 +57,7 @@ public class FragmentExerciceConhecaPc3 extends Fragment {
                                 ((CourseApplication) getActivity().getApplicationContext()).calcularPontuacao(33);
                                 Log.i("TAG", "" + ((CourseApplication) getActivity().getApplicationContext()).getPontuacao());
                                 Intent intent = new Intent(getActivity(), FinishExerciceActivity.class);
+                                intent.putExtra("passou", getActivity().getResources().getString(R.string.know_computer));
                                 getActivity().startActivity(intent);
                                 getActivity().finish();
                             }
@@ -77,6 +79,7 @@ public class FragmentExerciceConhecaPc3 extends Fragment {
                                 ((CourseApplication) getActivity().getApplicationContext()).calcularPontuacao(28);
                                 Log.i("TAG", "" + ((CourseApplication) getActivity().getApplicationContext()).getPontuacao());
                                 Intent intent = new Intent(getActivity(), FinishExerciceActivity.class);
+                                intent.putExtra("passou", getActivity().getResources().getString(R.string.know_computer));
                                 getActivity().startActivity(intent);
                                 getActivity().finish();
                             }
@@ -98,6 +101,7 @@ public class FragmentExerciceConhecaPc3 extends Fragment {
                                 ((CourseApplication) getActivity().getApplicationContext()).calcularPontuacao(28);
                                 Log.i("TAG", "" + ((CourseApplication) getActivity().getApplicationContext()).getPontuacao());
                                 Intent intent = new Intent(getActivity(), FinishExerciceActivity.class);
+                                intent.putExtra("passou", getActivity().getResources().getString(R.string.know_computer));
                                 getActivity().startActivity(intent);
                                 getActivity().finish();
                             }
@@ -119,6 +123,7 @@ public class FragmentExerciceConhecaPc3 extends Fragment {
                                 ((CourseApplication) getActivity().getApplicationContext()).calcularPontuacao(30);
                                 Log.i("TAG", "" + ((CourseApplication) getActivity().getApplicationContext()).getPontuacao());
                                 Intent intent = new Intent(getActivity(), FinishExerciceActivity.class);
+                                intent.putExtra("passou", getActivity().getResources().getString(R.string.know_computer));
                                 getActivity().startActivity(intent);
                                 getActivity().finish();
                             }

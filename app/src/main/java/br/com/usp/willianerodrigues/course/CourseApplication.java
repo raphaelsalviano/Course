@@ -21,7 +21,7 @@ public class CourseApplication extends Application implements DBMethods {
     @Override
     public void onCreate () {
         super.onCreate();
-        controller = new ORMController(getApplicationContext());
+        controller = new ORMController(getBaseContext());
         this.pontuacao = 0;
 
     }
@@ -55,6 +55,11 @@ public class CourseApplication extends Application implements DBMethods {
     @Override
     public Usuario searchUserByUser (String usuario) throws SQLException {
         return controller.searchUserByUser(usuario);
+    }
+
+    @Override
+    public void createOrUpdateItemMenu(ItemMenu itemMenu) throws SQLException {
+        controller.createOrUpdateItemMenu(itemMenu);
     }
 
 

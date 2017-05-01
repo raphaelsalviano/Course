@@ -23,14 +23,13 @@ import br.com.usp.willianerodrigues.course.model.ItemMenu;
 public class ExerciceActivity extends AppCompatActivity implements View.OnClickListener {
 
     private String local;
-    private CourseApplication application;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_exercice);
 
-        application = (CourseApplication) getApplicationContext();
+        CourseApplication application = (CourseApplication) getApplicationContext();
         List<ItemMenu> itemMenus = new ArrayList<>();
 
         try {

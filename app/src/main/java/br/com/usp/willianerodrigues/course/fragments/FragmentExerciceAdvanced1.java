@@ -25,9 +25,8 @@ public class FragmentExerciceAdvanced1 extends Fragment {
             @Override
             public void onClick(View v) {
                 new AlertDialog.Builder(getActivity())
-                        .setTitle("Resposta Incorreta!")
-                        .setMessage("A resposta correta é a Dell ou Apple," +
-                                "as duas empresas são empresas que vendem apenas hardware.")
+                        .setTitle("Resposta Correta!")
+                        .setMessage("Parabéns você aceitou!")
                         .setPositiveButton(R.string.alert_exercice_positive_button, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
@@ -65,9 +64,8 @@ public class FragmentExerciceAdvanced1 extends Fragment {
             @Override
             public void onClick(View v) {
                 new AlertDialog.Builder(getActivity())
-                        .setTitle("Resposta Incorreta!")
-                        .setMessage("A resposta correta é a Dell ou Apple," +
-                                "as duas empresas são empresas que vendem apenas hardware.")
+                        .setTitle("Resposta Correta!")
+                        .setMessage("Parabéns você aceitou!")
                         .setPositiveButton(R.string.alert_exercice_positive_button, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {

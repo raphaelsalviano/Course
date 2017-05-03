@@ -15,6 +15,7 @@ import br.com.usp.willianerodrigues.course.CourseApplication;
 import br.com.usp.willianerodrigues.course.R;
 import br.com.usp.willianerodrigues.course.fragments.FragmentExerciceAdvanced1;
 import br.com.usp.willianerodrigues.course.fragments.FragmentExerciceConhecaPc1;
+import br.com.usp.willianerodrigues.course.fragments.FragmentExerciceEditText1;
 import br.com.usp.willianerodrigues.course.fragments.FragmentExerciceInitial1;
 import br.com.usp.willianerodrigues.course.fragments.FragmentExerciceSO1;
 import br.com.usp.willianerodrigues.course.fragments.FragmentUserAdvancedWill;
@@ -56,22 +57,22 @@ public class ExerciceActivity extends AppCompatActivity implements View.OnClickL
         } else if (local.equalsIgnoreCase("main")) {
             application.resetPontuacao();
             String itemText = getIntent().getExtras().getString("item");
-            if (itemText.equalsIgnoreCase(itemMenus.get(0).getName())) {
+            if (itemText != null && itemText.equalsIgnoreCase(itemMenus.get(0).getName())) {
                 getSupportFragmentManager().beginTransaction().replace(R.id.container_exercice,
                         new FragmentExerciceConhecaPc1()).commit();
-            } else if (itemText.equalsIgnoreCase(itemMenus.get(1).getName())) {
+            } else if (itemText != null && itemText.equalsIgnoreCase(itemMenus.get(1).getName())) {
                 getSupportFragmentManager().beginTransaction().replace(R.id.container_exercice,
                         new FragmentExerciceSO1()).commit();
-            } else if (itemText.equalsIgnoreCase(itemMenus.get(2).getName())) {
+            } else if (itemText != null && itemText.equalsIgnoreCase(itemMenus.get(2).getName())) {
+                getSupportFragmentManager().beginTransaction().replace(R.id.container_exercice,
+                        new FragmentExerciceEditText1()).commit();
+            } else if (itemText != null && itemText.equalsIgnoreCase(itemMenus.get(3).getName())) {
                 getSupportFragmentManager().beginTransaction().replace(R.id.container_exercice,
                         new FragmentExerciceInitial1()).commit();
-            } else if (itemText.equalsIgnoreCase(itemMenus.get(3).getName())) {
+            } else if (itemText != null && itemText.equalsIgnoreCase(itemMenus.get(4).getName())) {
                 getSupportFragmentManager().beginTransaction().replace(R.id.container_exercice,
                         new FragmentExerciceInitial1()).commit();
-            } else if (itemText.equalsIgnoreCase(itemMenus.get(4).getName())) {
-                getSupportFragmentManager().beginTransaction().replace(R.id.container_exercice,
-                        new FragmentExerciceInitial1()).commit();
-            } else if (itemText.equalsIgnoreCase(itemMenus.get(5).getName())) {
+            } else if (itemText != null && itemText.equalsIgnoreCase(itemMenus.get(5).getName())) {
                 getSupportFragmentManager().beginTransaction().replace(R.id.container_exercice,
                         new FragmentExerciceInitial1()).commit();
             }

@@ -129,7 +129,7 @@
 
 
     <LinearLayout
-        android:id="@+id/exercice_advanced_2_nao_sei"
+        android:id="@+id/exercice_advanced_3_nao_sei"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/border_button_purple"

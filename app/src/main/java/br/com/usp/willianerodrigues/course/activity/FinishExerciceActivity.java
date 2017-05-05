@@ -31,14 +31,11 @@ public class FinishExerciceActivity extends AppCompatActivity {
         setContentView(R.layout.activity_finish_exercice);
 
         application = (CourseApplication) getApplicationContext();
-        Usuario usuario = null;
+        Usuario usuario;
 
         DonutProgress progress = (DonutProgress) findViewById(R.id.donut_progress);
         progress.setMax(48);
         TextView pontuacao = (TextView) findViewById(R.id.text_pontuacao);
-        TextView textoMeta = (TextView) findViewById(R.id.texto_de_meta);
-        TextView MenssagemMeta = (TextView) findViewById(R.id.messagem_texto_de_meta);
-
 
         List<ItemMenu> itemMenus = new ArrayList<>();
         try {
@@ -47,10 +44,27 @@ public class FinishExerciceActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
+        try {
+            usuario = application.getUserActive();
+            if (usuario != null) {
+                application.inserirPontuacaoUser();
+                application.resetPontuacao();
+                pontuacao.setText(usuario.getPontuacao());
+                progress.setDonut_progress("" + (usuario.getPontuacao() * 100) / 50);
+                progress.setProgress(usuario.getPontuacao());
+            } else {
+
+                pontuacao.setText(application.getPontuacao());
+                progress.setDonut_progress("" + (application.getPontuacao() * 100) / 50);
+                progress.setProgress(application.getPontuacao());
+            }
+        } catch (Exception e) {
+            Log.i("TAG", "Exception");
+            e.printStackTrace();
+        }
+
         if (getIntent().getExtras() != null) {
             String passou = getIntent().getExtras().getString("passou");
-
-            Log.i("TAG", passou);
 
             if (passou != null && passou.equalsIgnoreCase(getResources().getString(R.string.know_computer))) {
                 ItemMenu itemMenu = itemMenus.get(0);
@@ -121,30 +135,23 @@ public class FinishExerciceActivity extends AppCompatActivity {
             }
         }
 
-        try {
-            usuario = application.getUserActive();
-            if (usuario != null) {
-                application.inserirPontuacaoUser();
-                application.resetPontuacao();
-                pontuacao.setText(usuario.getPontuacao());
-                progress.setDonut_progress("" + (usuario.getPontuacao() * 100) / 16);
-                progress.setProgress(usuario.getPontuacao());
-            } else {
-                Log.i("TAG", "Exception");
-                pontuacao.setText(application.getPontuacao());
-                progress.setDonut_progress("" + (application.getPontuacao() * 100) / 16);
-                progress.setProgress(application.getPontuacao());
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_finish_exercice);
         setSupportActionBar(toolbar);
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(false);
             getSupportActionBar().setTitle("");
+        }
+
+        TextView textoMeta = (TextView) findViewById(R.id.texto_de_meta);
+        TextView MenssagemMeta = (TextView) findViewById(R.id.messagem_texto_de_meta);
+
+        if (progress.getProgress() >= 75) {
+            textoMeta.setText("Você foi acima da meta! Parabéns");
+            MenssagemMeta.setText("Agora você é capaz de entender um pouco mais sobre as funções do computador. Agora você poderá ir para o próximo nível.");
+
+        } else {
+            textoMeta.setText("Você nao atingiu a meta!");
+            MenssagemMeta.setText("Por favor, refaça o nível e tente novamente.");
         }
 
     }

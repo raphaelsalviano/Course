@@ -30,8 +30,11 @@ public class FragmentExerciceEditText2 extends Fragment {
                         .setPositiveButton(R.string.alert_exercice_positive_button, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                ((CourseApplication) getActivity().getApplicationContext()).calcularPontuacao(28);
-                                Log.i("TAG", "" + ((CourseApplication) getActivity().getApplicationContext()).getPontuacao());
+                                try {
+                                    ((CourseApplication) getActivity().getApplicationContext()).inserirPontuacaoUser(28);
+                                } catch (Exception e) {
+                                    e.printStackTrace();
+                                }
                                 getFragmentManager().beginTransaction().replace(R.id.container_exercice,
                                         new FragmentExerciceEditText3()).commit();
                             }
@@ -49,8 +52,11 @@ public class FragmentExerciceEditText2 extends Fragment {
                         .setPositiveButton(R.string.alert_exercice_positive_button, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                ((CourseApplication) getActivity().getApplicationContext()).calcularPontuacao(28);
-                                Log.i("TAG", "" + ((CourseApplication) getActivity().getApplicationContext()).getPontuacao());
+                                try {
+                                    ((CourseApplication) getActivity().getApplicationContext()).inserirPontuacaoUser(28);
+                                } catch (Exception e) {
+                                    e.printStackTrace();
+                                }
                                 getFragmentManager().beginTransaction().replace(R.id.container_exercice,
                                         new FragmentExerciceEditText3()).commit();
                             }
@@ -68,8 +74,11 @@ public class FragmentExerciceEditText2 extends Fragment {
                         .setPositiveButton(R.string.alert_exercice_positive_button, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                ((CourseApplication) getActivity().getApplicationContext()).calcularPontuacao(33);
-                                Log.i("TAG", "" + ((CourseApplication) getActivity().getApplicationContext()).getPontuacao());
+                                try {
+                                    ((CourseApplication) getActivity().getApplicationContext()).inserirPontuacaoUser(33);
+                                } catch (Exception e) {
+                                    e.printStackTrace();
+                                }
                                 getFragmentManager().beginTransaction().replace(R.id.container_exercice,
                                         new FragmentExerciceEditText3()).commit();
                             }
@@ -87,8 +96,11 @@ public class FragmentExerciceEditText2 extends Fragment {
                         .setPositiveButton(R.string.alert_exercice_positive_button, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                ((CourseApplication) getActivity().getApplicationContext()).calcularPontuacao(28);
-                                Log.i("TAG", "" + ((CourseApplication) getActivity().getApplicationContext()).getPontuacao());
+                                try {
+                                    ((CourseApplication) getActivity().getApplicationContext()).inserirPontuacaoUser(28);
+                                } catch (Exception e) {
+                                    e.printStackTrace();
+                                }
                                 getFragmentManager().beginTransaction().replace(R.id.container_exercice,
                                         new FragmentExerciceEditText3()).commit();
                             }
@@ -106,8 +118,11 @@ public class FragmentExerciceEditText2 extends Fragment {
                         .setPositiveButton(R.string.alert_exercice_positive_button, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                ((CourseApplication) getActivity().getApplicationContext()).calcularPontuacao(30);
-                                Log.i("TAG", "" + ((CourseApplication) getActivity().getApplicationContext()).getPontuacao());
+                                try {
+                                    ((CourseApplication) getActivity().getApplicationContext()).inserirPontuacaoUser(30);
+                                } catch (Exception e) {
+                                    e.printStackTrace();
+                                }
                                 getFragmentManager().beginTransaction().replace(R.id.container_exercice,
                                         new FragmentExerciceEditText3()).commit();
                             }

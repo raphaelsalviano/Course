@@ -3,11 +3,17 @@ package br.com.usp.willianerodrigues.course.activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import br.com.usp.willianerodrigues.course.R;
+import br.com.usp.willianerodrigues.course.util.MainAdapterRecycler;
+import br.com.usp.willianerodrigues.course.util.RankingAdapterRecycler;
 
 public class ProfileActivity extends AppCompatActivity {
 
@@ -22,6 +28,12 @@ public class ProfileActivity extends AppCompatActivity {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             getSupportActionBar().setTitle("Perfil");
         }
+
+        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recycler_ranking);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setItemAnimator(new DefaultItemAnimator());
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setAdapter(new RankingAdapterRecycler(this));
 
     }
 

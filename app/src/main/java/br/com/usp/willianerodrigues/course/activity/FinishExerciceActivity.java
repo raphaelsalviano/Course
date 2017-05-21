@@ -44,22 +44,22 @@ public class FinishExerciceActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
+        usuario = application.getUsuario();
+        Log.i("TAG", "Usuario é nulo");
+        Log.i("TAG", "" + application.getUsuario().getPontuacao());
+        pontuacao.setText("+ " + usuario.getPontuacao() + " PE");
+        progress.setDonut_progress("" + (usuario.getPontuacao() * 100) / 50);
+        progress.setProgress((usuario.getPontuacao() * 100) / 50);
         try {
-            usuario = application.getUserActive();
-            if (usuario != null) {
-                application.inserirPontuacaoUser();
-                application.resetPontuacao();
+            if (usuario == null) {
+                Log.i("TAG", "Usuario nao e nulo");
+                usuario = application.getUserActive();
                 pontuacao.setText(usuario.getPontuacao());
                 progress.setDonut_progress("" + (usuario.getPontuacao() * 100) / 50);
                 progress.setProgress(usuario.getPontuacao());
-            } else {
-
-                pontuacao.setText(application.getPontuacao());
-                progress.setDonut_progress("" + (application.getPontuacao() * 100) / 50);
-                progress.setProgress(application.getPontuacao());
             }
         } catch (Exception e) {
-            Log.i("TAG", "Exception");
+            Log.i("TAG", e.getMessage());
             e.printStackTrace();
         }
 
@@ -145,7 +145,8 @@ public class FinishExerciceActivity extends AppCompatActivity {
         TextView textoMeta = (TextView) findViewById(R.id.texto_de_meta);
         TextView MenssagemMeta = (TextView) findViewById(R.id.messagem_texto_de_meta);
 
-        if (progress.getProgress() >= 75) {
+        assert usuario != null;
+        if (usuario.getPontuacao() >= 75) {
             textoMeta.setText("Você foi acima da meta! Parabéns");
             MenssagemMeta.setText("Agora você é capaz de entender um pouco mais sobre as funções do computador. Agora você poderá ir para o próximo nível.");
 

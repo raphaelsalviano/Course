@@ -1,6 +1,7 @@
 package br.com.usp.willianerodrigues.course;
 
 import android.app.Application;
+import android.util.Log;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -13,16 +14,14 @@ import br.com.usp.willianerodrigues.course.model.Usuario;
 
 public class CourseApplication extends Application implements DBMethods {
 
-    public static final String APP_VERSION = "1.1";
-    private int pontuacao;
-
     private ORMController controller;
+
+    private Usuario usuario;
 
     @Override
     public void onCreate () {
         super.onCreate();
         controller = new ORMController(getBaseContext());
-        this.pontuacao = 0;
 
     }
 
@@ -62,30 +61,24 @@ public class CourseApplication extends Application implements DBMethods {
         controller.createOrUpdateItemMenu(itemMenu);
     }
 
-
-    public void calcularPontuacao(int porcentagemConcluida) {
-        this.pontuacao = ((50 * porcentagemConcluida) / 100) + this.pontuacao;
-    }
-
-    public void inserirPontuacaoUser() throws Exception {
+    public void inserirPontuacaoUser(int porcentagemConcluida) throws Exception {
         Usuario usuario = getUserActive();
-        if(usuario == null){
-            throw new Exception("Usuário vazio");
-        }
-        usuario.setPontuacao(this.pontuacao);
+        int pontuacao = ((50 * porcentagemConcluida) / 100) + usuario.getPontuacao();
+        usuario.setPontuacao(pontuacao);
         createOrUpdateUser(usuario);
     }
 
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+        Log.i("TAG", "Criou um usuario");
+    }
+
     @Override
-    public List<ItemMenu> getAllItens () throws SQLException {
+    public List<ItemMenu> getAllItens() throws SQLException {
         return controller.getAllItens();
-    }
-
-    public int getPontuacao() {
-        return this.pontuacao;
-    }
-
-    public void resetPontuacao() {
-        this.pontuacao = 0;
     }
 }

@@ -12,6 +12,7 @@ import android.widget.ProgressBar;
 
 import br.com.usp.willianerodrigues.course.CourseApplication;
 import br.com.usp.willianerodrigues.course.R;
+import br.com.usp.willianerodrigues.course.model.Usuario;
 
 public class FragmentExerciceAdvanced1 extends Fragment {
 
@@ -20,6 +21,8 @@ public class FragmentExerciceAdvanced1 extends Fragment {
         View view = inflater.inflate(R.layout.fragment_exercice_advanced_1, container, false);
 
         movimentarProgressBar(inflater, container);
+
+        final Usuario usuario = ((CourseApplication) getActivity().getApplicationContext()).getUsuario();
 
         ((view.findViewById(R.id.exercice_advanced_1_o1))).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -30,8 +33,8 @@ public class FragmentExerciceAdvanced1 extends Fragment {
                         .setPositiveButton(R.string.alert_exercice_positive_button, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                ((CourseApplication) getActivity().getApplicationContext()).calcularPontuacao(28);
-                                Log.i("TAG", "" + ((CourseApplication) getActivity().getApplicationContext()).getPontuacao());
+                                usuario.setPontuacao(28);
+                                ((CourseApplication) getActivity().getApplicationContext()).setUsuario(usuario);
                                 getFragmentManager().beginTransaction().replace(R.id.container_exercice,
                                         new FragmentExerciceAdvanced2()).commit();
                             }
@@ -50,8 +53,8 @@ public class FragmentExerciceAdvanced1 extends Fragment {
                         .setPositiveButton(R.string.alert_exercice_positive_button, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                ((CourseApplication) getActivity().getApplicationContext()).calcularPontuacao(28);
-                                Log.i("TAG", "" + ((CourseApplication) getActivity().getApplicationContext()).getPontuacao());
+                                usuario.setPontuacao(28);
+                                ((CourseApplication) getActivity().getApplicationContext()).setUsuario(usuario);
                                 getFragmentManager().beginTransaction().replace(R.id.container_exercice,
                                         new FragmentExerciceAdvanced2()).commit();
                             }
@@ -69,8 +72,8 @@ public class FragmentExerciceAdvanced1 extends Fragment {
                         .setPositiveButton(R.string.alert_exercice_positive_button, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                ((CourseApplication) getActivity().getApplicationContext()).calcularPontuacao(28);
-                                Log.i("TAG", "" + ((CourseApplication) getActivity().getApplicationContext()).getPontuacao());
+                                usuario.setPontuacao(28);
+                                ((CourseApplication) getActivity().getApplicationContext()).setUsuario(usuario);
                                 getFragmentManager().beginTransaction().replace(R.id.container_exercice,
                                         new FragmentExerciceAdvanced2()).commit();
                             }
@@ -89,8 +92,8 @@ public class FragmentExerciceAdvanced1 extends Fragment {
                         .setPositiveButton(R.string.alert_exercice_positive_button, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                ((CourseApplication) getActivity().getApplicationContext()).calcularPontuacao(33);
-                                Log.i("TAG", "" + ((CourseApplication) getActivity().getApplicationContext()).getPontuacao());
+                                usuario.setPontuacao(33);
+                                ((CourseApplication) getActivity().getApplicationContext()).setUsuario(usuario);
                                 getFragmentManager().beginTransaction().replace(R.id.container_exercice,
                                         new FragmentExerciceAdvanced2()).commit();
                             }
@@ -109,8 +112,8 @@ public class FragmentExerciceAdvanced1 extends Fragment {
                         .setPositiveButton(R.string.alert_exercice_positive_button, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                ((CourseApplication) getActivity().getApplicationContext()).calcularPontuacao(30);
-                                Log.i("TAG", "" + ((CourseApplication) getActivity().getApplicationContext()).getPontuacao());
+                                usuario.setPontuacao(30);
+                                ((CourseApplication) getActivity().getApplicationContext()).setUsuario(usuario);
                                 getFragmentManager().beginTransaction().replace(R.id.container_exercice,
                                         new FragmentExerciceAdvanced2()).commit();
                             }

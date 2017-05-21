@@ -239,9 +239,9 @@ public class RegistroActivity extends AppCompatActivity implements View.OnClickL
                 temp.setUsername(username);
                 temp.setPassword(senha);
                 temp.setActive(true);
-                if (application.getPontuacao() > 0) {
-                    temp.setPontuacao(application.getPontuacao());
-                    application.resetPontuacao();
+                if (application.getUsuario().getPontuacao() > 0) {
+                    temp.setPontuacao(application.getUsuario().getPontuacao());
+                    application.setUsuario(null);
                 }
 
                 try {

@@ -45,13 +45,15 @@ public class FinishExerciceActivity extends AppCompatActivity {
         }
 
         usuario = application.getUsuario();
-        Log.i("TAG", "Usuario é nulo");
-        Log.i("TAG", "" + application.getUsuario().getPontuacao());
-        pontuacao.setText("+ " + usuario.getPontuacao() + " PE");
-        progress.setDonut_progress("" + (usuario.getPontuacao() * 100) / 50);
-        progress.setProgress((usuario.getPontuacao() * 100) / 50);
+
         try {
-            if (usuario == null) {
+            if (usuario != null) {
+                Log.i("TAG", "Usuario é nulo");
+                Log.i("TAG", "" + application.getUsuario().getPontuacao());
+                pontuacao.setText("+ " + usuario.getPontuacao() + " PE");
+                progress.setDonut_progress("" + (usuario.getPontuacao() * 100) / 50);
+                progress.setProgress((usuario.getPontuacao() * 100) / 50);
+            } else {
                 Log.i("TAG", "Usuario nao e nulo");
                 usuario = application.getUserActive();
                 pontuacao.setText(usuario.getPontuacao());

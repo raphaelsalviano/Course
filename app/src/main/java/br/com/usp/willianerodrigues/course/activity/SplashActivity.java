@@ -25,19 +25,16 @@ public class SplashActivity extends AppCompatActivity implements Runnable{
     @Override
     public void run() {
         CourseApplication application = (CourseApplication) getApplicationContext();
-        try {
-            Usuario usuario = application.getUserActive();
-            Intent intent;
-            if(usuario != null){
-                intent = new Intent(this, MainActivity.class);
-            }else{
-                intent = new Intent(this, PresentationActivity.class);
-            }
-            startActivity(intent);
-            finish();
-        } catch (SQLException e) {
-            e.printStackTrace();
+
+        Usuario usuario = application.getUserActive();
+        Intent intent;
+        if (usuario != null) {
+            intent = new Intent(this, MainActivity.class);
+        } else {
+            intent = new Intent(this, PresentationActivity.class);
         }
+        startActivity(intent);
+        finish();
 
     }
 }

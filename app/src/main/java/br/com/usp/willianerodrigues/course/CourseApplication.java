@@ -22,6 +22,12 @@ public class CourseApplication extends Application implements DBMethods {
     public void onCreate () {
         super.onCreate();
         controller = new ORMController(getBaseContext());
+        try {
+            this.usuario = this.controller.getUserActive();
+        } catch (SQLException e) {
+            e.printStackTrace();
+            usuario = null;
+        }
 
     }
 
@@ -42,8 +48,8 @@ public class CourseApplication extends Application implements DBMethods {
     }
 
     @Override
-    public Usuario getUserActive () throws SQLException {
-        return controller.getUserActive();
+    public Usuario getUserActive() {
+        return this.usuario;
     }
 
     @Override

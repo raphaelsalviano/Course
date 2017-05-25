@@ -13,7 +13,7 @@ import br.com.usp.willianerodrigues.course.model.Usuario;
 class ORMCore extends OrmLiteSqliteOpenHelper {
 
      private static final String DB_NAME = "couse_db";
-     private static final int DB_VERSION = 2;
+    private static final int DB_VERSION = 3;
 
      ORMCore (Context context) {
           super(context, DB_NAME, null, DB_VERSION);

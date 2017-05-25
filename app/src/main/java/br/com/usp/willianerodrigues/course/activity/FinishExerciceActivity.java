@@ -171,19 +171,15 @@ public class FinishExerciceActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         if(id == R.id.action_done){
-            try{
-                Usuario usuario = application.getUserActive();
-                if(usuario == null){
-                    Intent intent = new Intent(this, RegistroActivity.class);
-                    startActivity(intent);
-                    finish();
-                }else{
-                    Intent intent = new Intent(this, MainActivity.class);
-                    startActivity(intent);
-                    finish();
-                }
-            }catch (SQLException e){
-                e.getMessage();
+            Usuario usuario = application.getUserActive();
+            if (usuario.getUsername() == null) {
+                Intent intent = new Intent(this, RegistroActivity.class);
+                startActivity(intent);
+                finish();
+            } else {
+                Intent intent = new Intent(this, MainActivity.class);
+                startActivity(intent);
+                finish();
             }
         }
 

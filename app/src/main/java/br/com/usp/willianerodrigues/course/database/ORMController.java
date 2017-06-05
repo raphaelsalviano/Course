@@ -6,6 +6,7 @@ import com.j256.ormlite.stmt.PreparedQuery;
 import com.j256.ormlite.stmt.QueryBuilder;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 import br.com.usp.willianerodrigues.course.R;
@@ -26,7 +27,6 @@ public class ORMController implements DBMethods {
           ormCore = new ORMCore(context);
           this.context = context;
           initializeDatabase();
-          initializeMenuItens();
      }
 
      public void closeDatabase () {
@@ -83,6 +83,18 @@ public class ORMController implements DBMethods {
           return menuDao.queryForAll();
      }
 
+     @Override
+     public List<ItemMenu> getItensUsuario(Usuario usuario) throws SQLException {
+          QueryBuilder<ItemMenu, Integer> builder = menuDao.queryBuilder();
+          builder.where().like("usuario", usuario);
+         List<ItemMenu> itemMenus = null;
+          PreparedQuery<ItemMenu> query = builder.prepare();
+          if ((menuDao.query(query).size() > 0)) {
+              itemMenus = menuDao.query(query);
+          }
+          return itemMenus;
+     }
+
      // Inicializa o DAO
      private void initializeDatabase () {
           try {
@@ -94,15 +106,15 @@ public class ORMController implements DBMethods {
      }
 
      //Inicializa no banco os itens de menu
-     private void initializeMenuItens () {
+     public void initializeMenuItens (Usuario usuario) {
           try {
                if(menuDao.queryForAll().size() == 0 && menuDao.queryForAll() != null){
-                    menuDao.createOrUpdate(new ItemMenu((context.getString(R.string.know_computer)), R.drawable.ico_pc, R.drawable.ico_pc_grey, false));
-                    menuDao.createOrUpdate(new ItemMenu((context.getString(R.string.operational_systems)), R.drawable.ico_windows, R.drawable.ico_windows_grey, true));
-                    menuDao.createOrUpdate(new ItemMenu((context.getString(R.string.text_editors)), R.drawable.ico_notepad, R.drawable.ico_notepad_disable, true));
-                    menuDao.createOrUpdate(new ItemMenu((context.getString(R.string.sheet_editors)), R.drawable.ico_sheet, R.drawable.ico_sheet_disable, true));
-                    menuDao.createOrUpdate(new ItemMenu((context.getString(R.string.publishers_presentations)), R.drawable.ico_presentation, R.drawable.ico_presentation_disable, true));
-                    menuDao.createOrUpdate(new ItemMenu((context.getString(R.string.internet)), R.drawable.ico_web, R.drawable.ico_web_grey, true));
+                    menuDao.createOrUpdate(new ItemMenu((context.getString(R.string.know_computer)), R.drawable.ico_pc, R.drawable.ico_pc_grey, false, usuario));
+                    menuDao.createOrUpdate(new ItemMenu((context.getString(R.string.operational_systems)), R.drawable.ico_windows, R.drawable.ico_windows_grey, true, usuario));
+                    menuDao.createOrUpdate(new ItemMenu((context.getString(R.string.text_editors)), R.drawable.ico_notepad, R.drawable.ico_notepad_disable, true, usuario));
+                    menuDao.createOrUpdate(new ItemMenu((context.getString(R.string.sheet_editors)), R.drawable.ico_sheet, R.drawable.ico_sheet_disable, true, usuario));
+                    menuDao.createOrUpdate(new ItemMenu((context.getString(R.string.publishers_presentations)), R.drawable.ico_presentation, R.drawable.ico_presentation_disable, true, usuario));
+                    menuDao.createOrUpdate(new ItemMenu((context.getString(R.string.internet)), R.drawable.ico_web, R.drawable.ico_web_grey, true, usuario));
                }
           } catch (SQLException e) {
                e.getMessage();

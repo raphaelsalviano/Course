@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.sql.SQLException;
@@ -12,20 +13,21 @@ import java.util.List;
 
 import br.com.usp.willianerodrigues.course.CourseApplication;
 import br.com.usp.willianerodrigues.course.R;
+import br.com.usp.willianerodrigues.course.model.ItemMenu;
 import br.com.usp.willianerodrigues.course.model.Usuario;
 
 public class RankingAdapterRecycler extends RecyclerView.Adapter<RankingAdapterRecycler.RankingViewHolder> {
 
     private Context context;
     private LayoutInflater inflater;
-    private List<Usuario> usuarios;
+    private List<ItemMenu> itemMenus;
 
     public RankingAdapterRecycler(Context context) {
         this.context = context;
         inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         CourseApplication application = (CourseApplication) context.getApplicationContext();
         try {
-            usuarios = application.getAllUser();
+            itemMenus = application.getItensUsuario(application.getUserActive());
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -39,27 +41,30 @@ public class RankingAdapterRecycler extends RecyclerView.Adapter<RankingAdapterR
 
     @Override
     public void onBindViewHolder(RankingViewHolder holder, int position) {
-        Usuario usuario = usuarios.get(position);
+        ItemMenu itemMenu = itemMenus.get(position);
 
-        holder.mName.setText(usuario.getName() + " " + usuario.getLastname());
-        holder.mPontuacao.setText(usuario.getPontuacao() + " pontos");
+        holder.mImage.setImageDrawable(context.getResources().getDrawable(itemMenu.getDrawableEnableId()));
+        holder.mName.setText(itemMenu.getName());
+        holder.mPontuacao.setText(itemMenu.getPontuacao() + " pontos");
     }
 
     @Override
     public int getItemCount() {
-        return usuarios.size();
+        return itemMenus.size();
     }
 
     class RankingViewHolder extends RecyclerView.ViewHolder {
 
         private TextView mName;
         private TextView mPontuacao;
+        private ImageView mImage;
 
         RankingViewHolder(View itemView) {
             super(itemView);
 
             mName = (TextView) itemView.findViewById(R.id.item_name_ranking);
             mPontuacao = (TextView) itemView.findViewById(R.id.item_pontuacao_ranking);
+            mImage = (ImageView) itemView.findViewById(R.id.ico_item_ranking);
         }
     }
 

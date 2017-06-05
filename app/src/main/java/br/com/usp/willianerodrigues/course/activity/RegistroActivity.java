@@ -246,6 +246,7 @@ public class RegistroActivity extends AppCompatActivity implements View.OnClickL
 
                 try {
                     application.createOrUpdateUser(temp);
+                    application.initializeMenuItens(application.getUserActive());
                 } catch (SQLException e) {
                     e.printStackTrace();
                 }

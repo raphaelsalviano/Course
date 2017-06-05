@@ -34,12 +34,12 @@ public class FinishExerciceActivity extends AppCompatActivity {
         Usuario usuario;
 
         DonutProgress progress = (DonutProgress) findViewById(R.id.donut_progress);
-        progress.setMax(48);
+        progress.setMax(30);
         TextView pontuacao = (TextView) findViewById(R.id.text_pontuacao);
 
         List<ItemMenu> itemMenus = new ArrayList<>();
         try {
-            itemMenus = application.getAllItens();
+            itemMenus = application.getItensUsuario(application.getUserActive());
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -74,6 +74,7 @@ public class FinishExerciceActivity extends AppCompatActivity {
                 ItemMenu itemMenu2 = itemMenus.get(1);
                 itemMenu2.setDisable(false);
                 try {
+                    itemMenu.setPontuacao(application.getUserActive().getPontuacao());
                     application.createOrUpdateItemMenu(itemMenu);
                     application.createOrUpdateItemMenu(itemMenu2);
                 } catch (SQLException e) {
@@ -82,6 +83,7 @@ public class FinishExerciceActivity extends AppCompatActivity {
             } else if (passou != null && passou.equalsIgnoreCase(getResources().getString(R.string.internet))) {
                 ItemMenu itemMenu = itemMenus.get(5);
                 itemMenu.setDisable(false);
+                itemMenu.setPontuacao(application.getUserActive().getPontuacao());
                 try {
                     application.createOrUpdateItemMenu(itemMenu);
                 } catch (SQLException e) {
@@ -94,6 +96,7 @@ public class FinishExerciceActivity extends AppCompatActivity {
                 itemMenu2.setDisable(false);
                 ItemMenu itemMenu3 = itemMenus.get(2);
                 itemMenu3.setDisable(false);
+                itemMenu2.setPontuacao(application.getUserActive().getPontuacao());
                 try {
                     application.createOrUpdateItemMenu(itemMenu);
                     application.createOrUpdateItemMenu(itemMenu2);
@@ -108,6 +111,7 @@ public class FinishExerciceActivity extends AppCompatActivity {
                 itemMenu2.setDisable(false);
                 ItemMenu itemMenu3 = itemMenus.get(2);
                 itemMenu3.setDisable(false);
+                itemMenu3.setPontuacao(application.getUserActive().getPontuacao());
                 ItemMenu itemMenu4 = itemMenus.get(3);
                 itemMenu4.setDisable(false);
                 try {
@@ -120,6 +124,7 @@ public class FinishExerciceActivity extends AppCompatActivity {
                 }
             } else if (passou != null && passou.equalsIgnoreCase(getResources().getString(R.string.sheet_editors))) {
                 ItemMenu itemMenu = itemMenus.get(3);
+                itemMenu.setPontuacao(application.getUserActive().getPontuacao());
                 itemMenu.setDisable(false);
                 try {
                     application.createOrUpdateItemMenu(itemMenu);
@@ -128,6 +133,7 @@ public class FinishExerciceActivity extends AppCompatActivity {
                 }
             } else if (passou != null && passou.equalsIgnoreCase(getResources().getString(R.string.publishers_presentations))) {
                 ItemMenu itemMenu = itemMenus.get(4);
+                itemMenu.setPontuacao(application.getUserActive().getPontuacao());
                 itemMenu.setDisable(false);
                 try {
                     application.createOrUpdateItemMenu(itemMenu);

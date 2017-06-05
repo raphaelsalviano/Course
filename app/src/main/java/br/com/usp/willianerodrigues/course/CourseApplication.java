@@ -83,8 +83,17 @@ public class CourseApplication extends Application implements DBMethods {
         Log.i("TAG", "Criou um usuario");
     }
 
+    public void initializeMenuItens(Usuario usuario){
+        this.controller.initializeMenuItens(usuario);
+    }
+
     @Override
     public List<ItemMenu> getAllItens() throws SQLException {
         return controller.getAllItens();
+    }
+
+    @Override
+    public List<ItemMenu> getItensUsuario(Usuario usuario) throws SQLException {
+        return controller.getItensUsuario(usuario);
     }
 }

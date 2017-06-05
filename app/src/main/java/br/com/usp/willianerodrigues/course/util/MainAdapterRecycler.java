@@ -29,7 +29,7 @@ public class MainAdapterRecycler extends RecyclerView.Adapter<MainAdapterRecycle
           inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
           CourseApplication application = (CourseApplication) context.getApplicationContext();
           try {
-               itemMenus = application.getAllItens();
+               itemMenus = application.getItensUsuario(application.getUserActive());
           } catch (SQLException e) {
                e.printStackTrace();
           }

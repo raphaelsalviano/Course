@@ -8,19 +8,19 @@ import br.com.usp.willianerodrigues.course.model.Usuario;
 
 public interface DBMethods {
 
-     void createOrUpdateUser(Usuario usuario) throws SQLException;
+    void createOrUpdateUser(Usuario usuario) throws SQLException;
 
-     void removeUser(Usuario usuario) throws SQLException;
+    void removeUser(Usuario usuario) throws SQLException;
 
-     Usuario getUserActive() throws SQLException;
+    Usuario getUserActive() throws SQLException;
 
-     List<Usuario> getAllUser() throws SQLException;
+    List<Usuario> getAllUser() throws SQLException;
 
-     Usuario searchUserByUser(String usuario) throws SQLException;
+    Usuario searchUserByUser(String usuario) throws SQLException;
 
     void createOrUpdateItemMenu(ItemMenu itemMenu) throws SQLException;
 
-     List<ItemMenu> getAllItens() throws SQLException;
+    List<ItemMenu> getAllItens() throws SQLException;
 
-
+    List<ItemMenu> getItensUsuario(Usuario usuario) throws SQLException;
 }

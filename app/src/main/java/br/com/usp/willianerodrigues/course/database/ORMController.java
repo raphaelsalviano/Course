@@ -6,7 +6,6 @@ import com.j256.ormlite.stmt.PreparedQuery;
 import com.j256.ormlite.stmt.QueryBuilder;
 
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.List;
 
 import br.com.usp.willianerodrigues.course.R;
@@ -86,7 +85,7 @@ public class ORMController implements DBMethods {
      @Override
      public List<ItemMenu> getItensUsuario(Usuario usuario) throws SQLException {
           QueryBuilder<ItemMenu, Integer> builder = menuDao.queryBuilder();
-          builder.where().like("usuario", usuario);
+         builder.where().like("usuario_id", usuario);
          List<ItemMenu> itemMenus = null;
           PreparedQuery<ItemMenu> query = builder.prepare();
           if ((menuDao.query(query).size() > 0)) {

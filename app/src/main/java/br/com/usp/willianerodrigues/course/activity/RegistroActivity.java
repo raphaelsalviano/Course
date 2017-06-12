@@ -7,9 +7,9 @@ import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.os.Build;
+import android.os.Bundle;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.KeyEvent;
@@ -246,7 +246,8 @@ public class RegistroActivity extends AppCompatActivity implements View.OnClickL
 
                 try {
                     application.createOrUpdateUser(temp);
-                    application.initializeMenuItens(application.getUserActive());
+                    //Usuario usuario = application.getUserActive();
+                    //application.initializeMenuItens(usuario);
                 } catch (SQLException e) {
                     e.printStackTrace();
                 }

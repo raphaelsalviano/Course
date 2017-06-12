@@ -13,7 +13,6 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 import java.sql.SQLException;
 
@@ -33,6 +32,11 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
 
         application = (CourseApplication) getApplicationContext();
+        try {
+            application.verificaUsuarioEMenu();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_main);
         setSupportActionBar(toolbar);
@@ -98,9 +102,10 @@ public class MainActivity extends AppCompatActivity
             Intent intent = new Intent(this, ProfileActivity.class);
             startActivity(intent);
             finish();
-        } else if (id == R.id.nav_settings) {
-            Toast.makeText(this, "Em breve você poderá acessar essa função", Toast.LENGTH_SHORT).show();
-        } else if (id == R.id.nav_exit) {
+        } //else if (id == R.id.nav_settings) {
+        //Toast.makeText(this, "Em breve você poderá acessar essa função", Toast.LENGTH_SHORT).show();
+        //}
+        else if (id == R.id.nav_exit) {
             try {
                 Usuario usuario = application.getUserActive();
                 usuario.setActive(false);

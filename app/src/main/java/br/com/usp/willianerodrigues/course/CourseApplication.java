@@ -6,7 +6,6 @@ import android.util.Log;
 import java.sql.SQLException;
 import java.util.List;
 
-
 import br.com.usp.willianerodrigues.course.database.DBMethods;
 import br.com.usp.willianerodrigues.course.database.ORMController;
 import br.com.usp.willianerodrigues.course.model.ItemMenu;
@@ -49,7 +48,14 @@ public class CourseApplication extends Application implements DBMethods {
 
     @Override
     public Usuario getUserActive() {
-        return this.usuario;
+        if (usuario == null) {
+            try {
+                return controller.getUserActive();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        return usuario;
     }
 
     @Override
@@ -95,5 +101,13 @@ public class CourseApplication extends Application implements DBMethods {
     @Override
     public List<ItemMenu> getItensUsuario(Usuario usuario) throws SQLException {
         return controller.getItensUsuario(usuario);
+    }
+
+    public void verificaUsuarioEMenu() throws SQLException {
+        Usuario usuario = getUserActive();
+        List<ItemMenu> itemMenus = getItensUsuario(usuario);
+        if (itemMenus == null) {
+            initializeMenuItens(usuario);
+        }
     }
 }

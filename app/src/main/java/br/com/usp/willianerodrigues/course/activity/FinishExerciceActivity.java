@@ -1,13 +1,12 @@
 package br.com.usp.willianerodrigues.course.activity;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.github.lzyzsd.circleprogress.DonutProgress;
@@ -33,8 +32,10 @@ public class FinishExerciceActivity extends AppCompatActivity {
         application = (CourseApplication) getApplicationContext();
         Usuario usuario;
 
+        int porcentagemMax = 30;
+
         DonutProgress progress = (DonutProgress) findViewById(R.id.donut_progress);
-        progress.setMax(30);
+        progress.setMax(porcentagemMax);
         TextView pontuacao = (TextView) findViewById(R.id.text_pontuacao);
 
         List<ItemMenu> itemMenus = new ArrayList<>();
@@ -51,13 +52,13 @@ public class FinishExerciceActivity extends AppCompatActivity {
                 Log.i("TAG", "Usuario é nulo");
                 Log.i("TAG", "" + application.getUsuario().getPontuacao());
                 pontuacao.setText("+ " + usuario.getPontuacao() + " PE");
-                progress.setDonut_progress("" + (usuario.getPontuacao() * 100) / 50);
-                progress.setProgress((usuario.getPontuacao() * 100) / 50);
+                progress.setDonut_progress("" + (usuario.getPontuacao() * 100) / porcentagemMax);
+                progress.setProgress((usuario.getPontuacao() * 100) / porcentagemMax);
             } else {
                 Log.i("TAG", "Usuario nao e nulo");
                 usuario = application.getUserActive();
                 pontuacao.setText(usuario.getPontuacao());
-                progress.setDonut_progress("" + (usuario.getPontuacao() * 100) / 50);
+                progress.setDonut_progress("" + (usuario.getPontuacao() * 100) / porcentagemMax);
                 progress.setProgress(usuario.getPontuacao());
             }
         } catch (Exception e) {
@@ -154,7 +155,7 @@ public class FinishExerciceActivity extends AppCompatActivity {
         TextView MenssagemMeta = (TextView) findViewById(R.id.messagem_texto_de_meta);
 
         assert usuario != null;
-        if (usuario.getPontuacao() >= 75) {
+        if (usuario.getPontuacao() >= 20) {
             textoMeta.setText("Você foi acima da meta! Parabéns");
             MenssagemMeta.setText("Agora você é capaz de entender um pouco mais sobre as funções do computador. Agora você poderá ir para o próximo nível.");
 
